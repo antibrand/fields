@@ -1,21 +1,19 @@
 <?php
-/*
-Plugin Name: fields
-Plugin URI: https://github.com/antibrand/fields
-Description: User inteface and frontend API for custom fields.
-Version: 1.0.0
-Text Domain: acf
-Domain Path: /lang
-*/
+/**
+ * Initialize the plugin
+ *
+ * @package    system
+ * @subpackage fields
+ * @since      1.0.0
+ */
 
 /**
- * Credits
+ * Namespace to be implemented in the future.
  *
- * This fields plugin was forked from Advanced Custom Fields.
- * Original author: Elliot Condon
- *
- * @see https://www.advancedcustomfields.com
+ * @todo Revise this doc block and uncomment the
+ *       namespace when it's ready to use.
  */
+// namespace Fields_Plugin;
 
 // Stop here if this file is called directly.
 if ( ! defined( 'WPINC' ) ) {
