@@ -32,27 +32,27 @@ class acf_form_front {
 		$this->fields = array(
 						
 			'_post_title' => array(
-				'prefix'	=> 'acf',
+				'prefix'	=> 'fields',
 				'name'		=> '_post_title',
 				'key'		=> '_post_title',
-				'label'		=> __('Title', 'acf'),
+				'label'		=> __('Title', 'fields'),
 				'type'		=> 'text',
 				'required'	=> true,
 			),
 			
 			'_post_content' => array(
-				'prefix'	=> 'acf',
+				'prefix'	=> 'fields',
 				'name'		=> '_post_content',
 				'key'		=> '_post_content',
-				'label'		=> __('Content', 'acf'),
+				'label'		=> __('Content', 'fields'),
 				'type'		=> 'wysiwyg',
 			),
 			
 			'_validate_email' => array(
-				'prefix'	=> 'acf',
+				'prefix'	=> 'fields',
 				'name'		=> '_validate_email',
 				'key'		=> '_validate_email',
-				'label'		=> __('Validate Email', 'acf'),
+				'label'		=> __('Validate Email', 'fields'),
 				'type'		=> 'text',
 				'value'		=> '',
 				'wrapper'	=> array('style' => 'display:none !important;')
@@ -101,8 +101,8 @@ class acf_form_front {
 			'return'				=> add_query_arg( 'updated', 'true', acf_get_current_url() ),
 			'html_before_fields'	=> '',
 			'html_after_fields'		=> '',
-			'submit_value'			=> __("Update", 'acf'),
-			'updated_message'		=> __("Post updated", 'acf'),
+			'submit_value'			=> __("Update", 'fields'),
+			'updated_message'		=> __("Post updated", 'fields'),
 			'label_placement'		=> 'top',
 			'instruction_placement'	=> 'label',
 			'field_el'				=> 'div',
@@ -216,7 +216,7 @@ class acf_form_front {
 		foreach( $this->fields as $k => $field ) {
 			
 			// bail early if no in $_POST
-			if( !isset($_POST['acf'][ $k ]) ) continue;
+			if( !isset($_POST['fields'][ $k ]) ) continue;
 			
 			
 			// register
@@ -226,9 +226,9 @@ class acf_form_front {
 		
 		
 		// honeypot
-		if( !empty($_POST['acf']['_validate_email']) ) {
+		if( !empty($_POST['fields']['_validate_email']) ) {
 			
-			acf_add_validation_error( '', __('Spam Detected', 'acf') );
+			acf_add_validation_error( '', __('Spam Detected', 'fields') );
 			
 		}
 		
@@ -276,23 +276,23 @@ class acf_form_front {
 		
 		
 		// save post_title
-		if( isset($_POST['acf']['_post_title']) ) {
+		if( isset($_POST['fields']['_post_title']) ) {
 			
-			$save['post_title'] = acf_extract_var($_POST['acf'], '_post_title');
+			$save['post_title'] = acf_extract_var($_POST['fields'], '_post_title');
 		
 		}
 		
 		
 		// save post_content
-		if( isset($_POST['acf']['_post_content']) ) {
+		if( isset($_POST['fields']['_post_content']) ) {
 			
-			$save['post_content'] = acf_extract_var($_POST['acf'], '_post_content');
+			$save['post_content'] = acf_extract_var($_POST['fields'], '_post_content');
 			
 		}
 		
 		
 		// honeypot
-		if( !empty($_POST['acf']['_validate_email']) ) return false;
+		if( !empty($_POST['fields']['_validate_email']) ) return false;
 		
 		
 		// validate
@@ -383,8 +383,8 @@ class acf_form_front {
 		}    	
     	
     	// Run kses on all $_POST data.
-    	if( $form['kses'] && isset($_POST['acf']) ) {
-	    	$_POST['acf'] = wp_kses_post_deep( $_POST['acf'] );
+    	if( $form['kses'] && isset($_POST['fields']) ) {
+	    	$_POST['fields'] = wp_kses_post_deep( $_POST['fields'] );
     	}
     	
 		// Validate data and show errors.

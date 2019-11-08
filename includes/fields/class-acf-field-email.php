@@ -22,7 +22,7 @@ class acf_field_email extends acf_field {
 		
 		// vars
 		$this->name = 'email';
-		$this->label = __("Email",'acf');
+		$this->label = __("Email",'fields');
 		$this->defaults = array(
 			'default_value'	=> '',
 			'placeholder'	=> '',
@@ -115,8 +115,8 @@ class acf_field_email extends acf_field {
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Default Value','acf'),
-			'instructions'	=> __('Appears when creating a new post','acf'),
+			'label'			=> __('Default Value','fields'),
+			'instructions'	=> __('Appears when creating a new post','fields'),
 			'type'			=> 'text',
 			'name'			=> 'default_value',
 		));
@@ -124,8 +124,8 @@ class acf_field_email extends acf_field {
 		
 		// placeholder
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Placeholder Text','acf'),
-			'instructions'	=> __('Appears within the input','acf'),
+			'label'			=> __('Placeholder Text','fields'),
+			'instructions'	=> __('Appears within the input','fields'),
 			'type'			=> 'text',
 			'name'			=> 'placeholder',
 		));
@@ -133,8 +133,8 @@ class acf_field_email extends acf_field {
 		
 		// prepend
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Prepend','acf'),
-			'instructions'	=> __('Appears before the input','acf'),
+			'label'			=> __('Prepend','fields'),
+			'instructions'	=> __('Appears before the input','fields'),
 			'type'			=> 'text',
 			'name'			=> 'prepend',
 		));
@@ -142,8 +142,8 @@ class acf_field_email extends acf_field {
 		
 		// append
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Append','acf'),
-			'instructions'	=> __('Appears after the input','acf'),
+			'label'			=> __('Append','fields'),
+			'instructions'	=> __('Appears after the input','fields'),
 			'type'			=> 'text',
 			'name'			=> 'append',
 		));

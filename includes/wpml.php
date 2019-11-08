@@ -81,9 +81,9 @@ class ACF_WPML_Compatibility {
 			$sitepress->set_setting('custom_posts_sync_option', $post_types);
 		}
 		
-		// when upgrading to version 5, review 'acf' setting
-		// update 'acf-field-group' if 'acf' is translatable, and 'acf-field-group' does not yet exist
-		if( !empty($post_types['acf']) && !isset($post_types['acf-field-group']) ) {
+		// when upgrading to version 5, review 'fields' setting
+		// update 'acf-field-group' if 'fields' is translatable, and 'acf-field-group' does not yet exist
+		if( !empty($post_types['fields']) && !isset($post_types['acf-field-group']) ) {
 			$post_types['acf-field-group'] = 1;
 			$sitepress->set_setting('custom_posts_sync_option', $post_types);
 		}

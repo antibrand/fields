@@ -22,7 +22,7 @@ class acf_field_date_and_time_picker extends acf_field {
 		
 		// vars
 		$this->name = 'date_time_picker';
-		$this->label = __("Date Time Picker",'acf');
+		$this->label = __("Date Time Picker",'fields');
 		$this->category = 'jquery';
 		$this->defaults = array(
 			'display_format'	=> 'd/m/Y g:i a',
@@ -65,24 +65,24 @@ class acf_field_date_and_time_picker extends acf_field {
 		// localize
 		acf_localize_data(array(
 		   	'dateTimePickerL10n'	=> array(
-				'timeOnlyTitle'		=> _x('Choose Time',	'Date Time Picker JS timeOnlyTitle',	'acf'),
-		        'timeText'       	=> _x('Time',			'Date Time Picker JS timeText', 		'acf'),
-		        'hourText'        	=> _x('Hour',			'Date Time Picker JS hourText', 		'acf'),
-		        'minuteText'  		=> _x('Minute',			'Date Time Picker JS minuteText', 		'acf'),
-		        'secondText'		=> _x('Second',			'Date Time Picker JS secondText', 		'acf'),
-		        'millisecText'		=> _x('Millisecond',	'Date Time Picker JS millisecText', 	'acf'),
-		        'microsecText'		=> _x('Microsecond',	'Date Time Picker JS microsecText', 	'acf'),
-		        'timezoneText'		=> _x('Time Zone',		'Date Time Picker JS timezoneText', 	'acf'),
-		        'currentText'		=> _x('Now',			'Date Time Picker JS currentText', 		'acf'),
-		        'closeText'			=> _x('Done',			'Date Time Picker JS closeText', 		'acf'),
-		        'selectText'		=> _x('Select',			'Date Time Picker JS selectText', 		'acf'),
+				'timeOnlyTitle'		=> _x('Choose Time',	'Date Time Picker JS timeOnlyTitle',	'fields'),
+		        'timeText'       	=> _x('Time',			'Date Time Picker JS timeText', 		'fields'),
+		        'hourText'        	=> _x('Hour',			'Date Time Picker JS hourText', 		'fields'),
+		        'minuteText'  		=> _x('Minute',			'Date Time Picker JS minuteText', 		'fields'),
+		        'secondText'		=> _x('Second',			'Date Time Picker JS secondText', 		'fields'),
+		        'millisecText'		=> _x('Millisecond',	'Date Time Picker JS millisecText', 	'fields'),
+		        'microsecText'		=> _x('Microsecond',	'Date Time Picker JS microsecText', 	'fields'),
+		        'timezoneText'		=> _x('Time Zone',		'Date Time Picker JS timezoneText', 	'fields'),
+		        'currentText'		=> _x('Now',			'Date Time Picker JS currentText', 		'fields'),
+		        'closeText'			=> _x('Done',			'Date Time Picker JS closeText', 		'fields'),
+		        'selectText'		=> _x('Select',			'Date Time Picker JS selectText', 		'fields'),
 		        'amNames'			=> array(
-			        					_x('AM',			'Date Time Picker JS amText', 			'acf'),
-										_x('A',				'Date Time Picker JS amTextShort', 		'acf'),
+			        					_x('AM',			'Date Time Picker JS amText', 			'fields'),
+										_x('A',				'Date Time Picker JS amTextShort', 		'fields'),
 									),
 		        'pmNames'			=> array(
-			        					_x('PM',			'Date Time Picker JS pmText', 			'acf'),
-										_x('P',				'Date Time Picker JS pmTextShort', 		'acf'),
+			        					_x('PM',			'Date Time Picker JS pmText', 			'fields'),
+										_x('P',				'Date Time Picker JS pmTextShort', 		'fields'),
 									)
 			)
 	   	));
@@ -180,8 +180,8 @@ class acf_field_date_and_time_picker extends acf_field {
 		
 		// display_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Display Format','acf'),
-			'instructions'	=> __('The format displayed when editing a post','acf'),
+			'label'			=> __('Display Format','fields'),
+			'instructions'	=> __('The format displayed when editing a post','fields'),
 			'type'			=> 'radio',
 			'name'			=> 'display_format',
 			'other_choice'	=> 1,
@@ -190,15 +190,15 @@ class acf_field_date_and_time_picker extends acf_field {
 				'm/d/Y g:i a'	=> '<span>' . $m_d_Y . '</span><code>m/d/Y g:i a</code>',
 				'F j, Y g:i a'	=> '<span>' . $F_j_Y . '</span><code>F j, Y g:i a</code>',
 				'Y-m-d H:i:s'	=> '<span>' . $Ymd . '</span><code>Y-m-d H:i:s</code>',
-				'other'			=> '<span>' . __('Custom:','acf') . '</span>'
+				'other'			=> '<span>' . __('Custom:','fields') . '</span>'
 			)
 		));
 				
 		
 		// return_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Return Format','acf'),
-			'instructions'	=> __('The format returned via template functions','acf'),
+			'label'			=> __('Return Format','fields'),
+			'instructions'	=> __('The format returned via template functions','fields'),
 			'type'			=> 'radio',
 			'name'			=> 'return_format',
 			'other_choice'	=> 1,
@@ -207,14 +207,14 @@ class acf_field_date_and_time_picker extends acf_field {
 				'm/d/Y g:i a'	=> '<span>' . $m_d_Y . '</span><code>m/d/Y g:i a</code>',
 				'F j, Y g:i a'	=> '<span>' . $F_j_Y . '</span><code>F j, Y g:i a</code>',
 				'Y-m-d H:i:s'	=> '<span>' . $Ymd . '</span><code>Y-m-d H:i:s</code>',
-				'other'			=> '<span>' . __('Custom:','acf') . '</span>'
+				'other'			=> '<span>' . __('Custom:','fields') . '</span>'
 			)
 		));
 				
 		
 		// first_day
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Week Starts On','acf'),
+			'label'			=> __('Week Starts On','fields'),
 			'instructions'	=> '',
 			'type'			=> 'select',
 			'name'			=> 'first_day',

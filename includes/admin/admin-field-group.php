@@ -83,16 +83,16 @@ class acf_admin_field_group {
 		// append to messages
 		$messages['acf-field-group'] = array(
 			0 => '', // Unused. Messages start at index 1.
-			1 => __('Field group updated.', 'acf'),
-			2 => __('Field group updated.', 'acf'),
-			3 => __('Field group deleted.', 'acf'),
-			4 => __('Field group updated.', 'acf'),
+			1 => __('Field group updated.', 'fields'),
+			2 => __('Field group updated.', 'fields'),
+			3 => __('Field group deleted.', 'fields'),
+			4 => __('Field group updated.', 'fields'),
 			5 => false, // field group does not support revisions
-			6 => __('Field group published.', 'acf'),
-			7 => __('Field group saved.', 'acf'),
-			8 => __('Field group submitted.', 'acf'),
-			9 => __('Field group scheduled for.', 'acf'),
-			10 => __('Field group draft updated.', 'acf')
+			6 => __('Field group published.', 'fields'),
+			7 => __('Field group saved.', 'fields'),
+			8 => __('Field group submitted.', 'fields'),
+			9 => __('Field group scheduled for.', 'fields'),
+			10 => __('Field group draft updated.', 'fields')
 		);
 		
 		
@@ -168,18 +168,18 @@ class acf_admin_field_group {
 		
 		// localize text
 		acf_localize_text(array(
-			'The string "field_" may not be used at the start of a field name'	=> __('The string "field_" may not be used at the start of a field name', 'acf'),
-			'This field cannot be moved until its changes have been saved'		=> __('This field cannot be moved until its changes have been saved', 'acf'),
-			'Field group title is required'										=> __('Field group title is required', 'acf'),
-			'Move to trash. Are you sure?'										=> __('Move to trash. Are you sure?', 'acf'),
-			'No toggle fields available'										=> __('No toggle fields available', 'acf'),
-			'Move Custom Field'													=> __('Move Custom Field', 'acf'),
-			'Checked'															=> __('Checked', 'acf'),
-			'(no label)'														=> __('(no label)', 'acf'),
-			'(this field)'														=> __('(this field)', 'acf'),
-			'copy'																=> __('copy', 'acf'),
-			'or'																=> __('or', 'acf'),
-			'Null'																=> __('Null', 'acf'),
+			'The string "field_" may not be used at the start of a field name'	=> __('The string "field_" may not be used at the start of a field name', 'fields'),
+			'This field cannot be moved until its changes have been saved'		=> __('This field cannot be moved until its changes have been saved', 'fields'),
+			'Field group title is required'										=> __('Field group title is required', 'fields'),
+			'Move to trash. Are you sure?'										=> __('Move to trash. Are you sure?', 'fields'),
+			'No toggle fields available'										=> __('No toggle fields available', 'fields'),
+			'Move Custom Field'													=> __('Move Custom Field', 'fields'),
+			'Checked'															=> __('Checked', 'fields'),
+			'(no label)'														=> __('(no label)', 'fields'),
+			'(this field)'														=> __('(this field)', 'fields'),
+			'copy'																=> __('copy', 'fields'),
+			'or'																=> __('or', 'fields'),
+			'Null'																=> __('Null', 'fields'),
 		));
 		
 		// localize data
@@ -217,9 +217,9 @@ class acf_admin_field_group {
 		
 		
 		// metaboxes
-		add_meta_box('acf-field-group-fields', __("Fields",'acf'), array($this, 'mb_fields'), 'acf-field-group', 'normal', 'high');
-		add_meta_box('acf-field-group-locations', __("Location",'acf'), array($this, 'mb_locations'), 'acf-field-group', 'normal', 'high');
-		add_meta_box('acf-field-group-options', __("Settings",'acf'), array($this, 'mb_options'), 'acf-field-group', 'normal', 'high');
+		add_meta_box('acf-field-group-fields', __("Fields",'fields'), array($this, 'mb_fields'), 'acf-field-group', 'normal', 'high');
+		add_meta_box('acf-field-group-locations', __("Location",'fields'), array($this, 'mb_locations'), 'acf-field-group', 'normal', 'high');
+		add_meta_box('acf-field-group-options', __("Settings",'fields'), array($this, 'mb_options'), 'acf-field-group', 'normal', 'high');
 		
 		
 		// actions
@@ -369,7 +369,7 @@ class acf_admin_field_group {
 		
 		// append
 	    $html .= '<div id="acf-append-show-on-screen" class="acf-hidden">';
-	    $html .= '<label for="acf-field-key-hide"><input id="acf-field-key-hide" type="checkbox" value="1" name="show_field_keys" ' . $checked . ' /> ' . __('Field Keys','acf') . '</label>';
+	    $html .= '<label for="acf-field-key-hide"><input id="acf-field-key-hide" type="checkbox" value="1" name="show_field_keys" ' . $checked . ' /> ' . __('Field Keys','fields') . '</label>';
 		$html .= '</div>';
 	    
 	    
@@ -399,7 +399,7 @@ class acf_admin_field_group {
 		
 		
 		// vars
-		$status = $field_group['active'] ? __("Active",'acf') : __("Inactive",'acf');
+		$status = $field_group['active'] ? __("Active",'fields') : __("Inactive",'fields');
 		
 ?>
 <script type="text/javascript">
@@ -764,9 +764,9 @@ class acf_admin_field_group {
 			
 			// message
 			$a = '<a href="' . admin_url("post.php?post={$field_group['ID']}&action=edit") . '" target="_blank">' . $field_group['title'] . '</a>';
-			echo '<p><strong>' . __('Move Complete.', 'acf') . '</strong></p>';
-			echo '<p>' . sprintf( __('The %s field can now be found in the %s field group', 'acf'), $field['label'], $a ). '</p>';
-			echo '<a href="#" class="button button-primary acf-close-popup">' . __("Close Window",'acf') . '</a>';
+			echo '<p><strong>' . __('Move Complete.', 'fields') . '</strong></p>';
+			echo '<p>' . sprintf( __('The %s field can now be found in the %s field group', 'fields'), $field['label'], $a ). '</p>';
+			echo '<a href="#" class="button button-primary acf-close-popup">' . __("Close Window",'fields') . '</a>';
 			die();
 			
 		}
@@ -807,14 +807,14 @@ class acf_admin_field_group {
 		));
 		
 		
-		echo '<p>' . __('Please select the destination for this field', 'acf') . '</p>';
+		echo '<p>' . __('Please select the destination for this field', 'fields') . '</p>';
 		
 		echo '<form id="acf-move-field-form">';
 		
 			// render
 			acf_render_field_wrap( $field );
 			
-			echo '<button type="submit" class="button button-primary">' . __("Move Field",'acf') . '</button>';
+			echo '<button type="submit" class="button button-primary">' . __("Move Field",'fields') . '</button>';
 			
 		echo '</form>';
 		

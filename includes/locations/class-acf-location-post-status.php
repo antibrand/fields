@@ -24,7 +24,7 @@ class acf_location_post_status extends acf_location {
 		
 		// vars
 		$this->name = 'post_status';
-		$this->label = __("Post Status",'acf');
+		$this->label = __("Post Status",'fields');
 		$this->category = 'post';
     	
 	}

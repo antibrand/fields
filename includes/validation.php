@@ -198,11 +198,11 @@ class acf_validation {
 	function acf_validate_save_post() {
 		
 		// bail early if no $_POST
-		if( empty($_POST['acf']) ) return;
+		if( empty($_POST['fields']) ) return;
 		
 		
 		// validate
-		acf_validate_values( $_POST['acf'], 'acf' );
+		acf_validate_values( $_POST['fields'], 'fields' );
 				
 	}
 	
@@ -282,7 +282,7 @@ function acf_validate_save_post( $show_errors = false ) {
 	// show errors
 	if( $show_errors ) {
 			
-		$message = '<h2>' . __('Validation failed', 'acf') . '</h2>';
+		$message = '<h2>' . __('Validation failed', 'fields') . '</h2>';
 		$message .= '<ul>';
 		foreach( $errors as $error ) {
 			
@@ -293,7 +293,7 @@ function acf_validate_save_post( $show_errors = false ) {
 		
 		
 		// die
-		wp_die( $message, __('Validation failed', 'acf') );
+		wp_die( $message, __('Validation failed', 'fields') );
 		
 	}
 	
@@ -361,7 +361,7 @@ function acf_validate_value( $value, $field, $input ) {
 	
 	// vars
 	$valid = true;
-	$message = sprintf( __( '%s value is required', 'acf' ), $field['label'] );
+	$message = sprintf( __( '%s value is required', 'fields' ), $field['label'] );
 	
 	
 	// valid

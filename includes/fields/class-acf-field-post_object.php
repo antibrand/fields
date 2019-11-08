@@ -22,7 +22,7 @@ class acf_field_post_object extends acf_field {
 		
 		// vars
 		$this->name = 'post_object';
-		$this->label = __("Post Object",'acf');
+		$this->label = __("Post Object",'fields');
 		$this->category = 'relational';
 		$this->defaults = array(
 			'post_type'		=> array(),
@@ -264,7 +264,7 @@ class acf_field_post_object extends acf_field {
 		
 		
 		// look for parent
-		$search = '| ' . __('Parent', 'acf') . ':';
+		$search = '| ' . __('Parent', 'fields') . ':';
 		$pos = strpos($text, $search);
 		
 		if( $pos !== false ) {
@@ -380,7 +380,7 @@ class acf_field_post_object extends acf_field {
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Filter by Post Type','acf'),
+			'label'			=> __('Filter by Post Type','fields'),
 			'instructions'	=> '',
 			'type'			=> 'select',
 			'name'			=> 'post_type',
@@ -388,13 +388,13 @@ class acf_field_post_object extends acf_field {
 			'multiple'		=> 1,
 			'ui'			=> 1,
 			'allow_null'	=> 1,
-			'placeholder'	=> __("All post types",'acf'),
+			'placeholder'	=> __("All post types",'fields'),
 		));
 		
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Filter by Taxonomy','acf'),
+			'label'			=> __('Filter by Taxonomy','fields'),
 			'instructions'	=> '',
 			'type'			=> 'select',
 			'name'			=> 'taxonomy',
@@ -402,13 +402,13 @@ class acf_field_post_object extends acf_field {
 			'multiple'		=> 1,
 			'ui'			=> 1,
 			'allow_null'	=> 1,
-			'placeholder'	=> __("All taxonomies",'acf'),
+			'placeholder'	=> __("All taxonomies",'fields'),
 		));
 		
 		
 		// allow_null
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Allow Null?','acf'),
+			'label'			=> __('Allow Null?','fields'),
 			'instructions'	=> '',
 			'name'			=> 'allow_null',
 			'type'			=> 'true_false',
@@ -418,7 +418,7 @@ class acf_field_post_object extends acf_field {
 		
 		// multiple
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Select multiple values?','acf'),
+			'label'			=> __('Select multiple values?','fields'),
 			'instructions'	=> '',
 			'name'			=> 'multiple',
 			'type'			=> 'true_false',
@@ -428,13 +428,13 @@ class acf_field_post_object extends acf_field {
 		
 		// return_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Return Format','acf'),
+			'label'			=> __('Return Format','fields'),
 			'instructions'	=> '',
 			'type'			=> 'radio',
 			'name'			=> 'return_format',
 			'choices'		=> array(
-				'object'		=> __("Post Object",'acf'),
-				'id'			=> __("Post ID",'acf'),
+				'object'		=> __("Post Object",'fields'),
+				'id'			=> __("Post ID",'fields'),
 			),
 			'layout'	=>	'horizontal',
 		));

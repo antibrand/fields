@@ -19,7 +19,7 @@ class ACF_Location_User_Role extends acf_location {
 	 */
 	function initialize() {
 		$this->name = 'user_role';
-		$this->label = __("User Role", 'acf');
+		$this->label = __("User Role", 'fields');
 		$this->category = 'user';
 	}
 	
@@ -85,7 +85,7 @@ class ACF_Location_User_Role extends acf_location {
 		
 		// Merge roles with defaults and return.
 		return wp_parse_args($wp_roles->get_names(), array(
-			'all' => __('All', 'acf')
+			'all' => __('All', 'fields')
 		));
 	}
 }

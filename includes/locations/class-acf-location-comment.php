@@ -24,7 +24,7 @@ class acf_location_comment extends acf_location {
 		
 		// vars
 		$this->name = 'comment';
-		$this->label = __("Comment",'acf');
+		$this->label = __("Comment",'fields');
 		$this->category = 'forms';
     	
 	}
@@ -76,7 +76,7 @@ class acf_location_comment extends acf_location {
 	function rule_values( $choices, $rule ) {
 		
 		// vars
-		$choices = array( 'all' => __('All', 'acf') );
+		$choices = array( 'all' => __('All', 'fields') );
 		$choices = array_merge( $choices, acf_get_pretty_post_types() );
 		// change this to post types that support comments				
 		

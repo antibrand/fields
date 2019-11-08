@@ -21,7 +21,7 @@ class acf_field__accordion extends acf_field {
 		
 		// vars
 		$this->name = 'accordion';
-		$this->label = __("Accordion",'acf');
+		$this->label = __("Accordion",'fields');
 		$this->category = 'layout';
 		$this->defaults = array(
 			'open'			=> 0,
@@ -80,13 +80,13 @@ class acf_field__accordion extends acf_field {
 /*
 		// message
 		$message = '';
-		$message .= '<p>' . __( 'Accordions help you organize fields into panels that open and close.', 'acf') . '</p>';
-		$message .= '<p>' . __( 'All fields following this accordion (or until another accordion is defined) will be grouped together.','acf') . '</p>';
+		$message .= '<p>' . __( 'Accordions help you organize fields into panels that open and close.', 'fields') . '</p>';
+		$message .= '<p>' . __( 'All fields following this accordion (or until another accordion is defined) will be grouped together.','fields') . '</p>';
 		
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Instructions','acf'),
+			'label'			=> __('Instructions','fields'),
 			'instructions'	=> '',
 			'name'			=> 'notes',
 			'type'			=> 'message',
@@ -96,8 +96,8 @@ class acf_field__accordion extends acf_field {
 		
 		// active
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Open','acf'),
-			'instructions'	=> __('Display this accordion as open on page load.','acf'),
+			'label'			=> __('Open','fields'),
+			'instructions'	=> __('Display this accordion as open on page load.','fields'),
 			'name'			=> 'open',
 			'type'			=> 'true_false',
 			'ui'			=> 1,
@@ -106,8 +106,8 @@ class acf_field__accordion extends acf_field {
 		
 		// multi_expand
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Multi-expand','acf'),
-			'instructions'	=> __('Allow this accordion to open without closing others.','acf'),
+			'label'			=> __('Multi-expand','fields'),
+			'instructions'	=> __('Allow this accordion to open without closing others.','fields'),
 			'name'			=> 'multi_expand',
 			'type'			=> 'true_false',
 			'ui'			=> 1,
@@ -116,8 +116,8 @@ class acf_field__accordion extends acf_field {
 		
 		// endpoint
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Endpoint','acf'),
-			'instructions'	=> __('Define an endpoint for the previous accordion to stop. This accordion will not be visible.','acf'),
+			'label'			=> __('Endpoint','fields'),
+			'instructions'	=> __('Define an endpoint for the previous accordion to stop. This accordion will not be visible.','fields'),
 			'name'			=> 'endpoint',
 			'type'			=> 'true_false',
 			'ui'			=> 1,

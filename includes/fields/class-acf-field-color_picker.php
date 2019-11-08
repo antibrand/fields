@@ -22,7 +22,7 @@ class acf_field_color_picker extends acf_field {
 		
 		// vars
 		$this->name = 'color_picker';
-		$this->label = __("Color Picker",'acf');
+		$this->label = __("Color Picker",'fields');
 		$this->category = 'jquery';
 		$this->defaults = array(
 			'default_value'	=> '',
@@ -65,10 +65,10 @@ class acf_field_color_picker extends acf_field {
 			
 			// localize
 		    wp_localize_script('wp-color-picker', 'wpColorPickerL10n', array(
-		        'clear'			=> __('Clear', 'acf' ),
-		        'defaultString'	=> __('Default', 'acf' ),
-		        'pick'			=> __('Select Color', 'acf' ),
-		        'current'		=> __('Current Color', 'acf' )
+		        'clear'			=> __('Clear', 'fields' ),
+		        'defaultString'	=> __('Default', 'fields' ),
+		        'pick'			=> __('Select Color', 'fields' ),
+		        'current'		=> __('Current Color', 'fields' )
 		    )); 
 			
 		}
@@ -128,7 +128,7 @@ class acf_field_color_picker extends acf_field {
 		
 		// display_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Default Value','acf'),
+			'label'			=> __('Default Value','fields'),
 			'instructions'	=> '',
 			'type'			=> 'text',
 			'name'			=> 'default_value',

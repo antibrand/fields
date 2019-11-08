@@ -22,7 +22,7 @@ class acf_field_checkbox extends acf_field {
 		
 		// vars
 		$this->name = 'checkbox';
-		$this->label = __("Checkbox",'acf');
+		$this->label = __("Checkbox",'fields');
 		$this->category = 'choice';
 		$this->defaults = array(
 			'layout'			=> 'vertical',
@@ -151,7 +151,7 @@ class acf_field_checkbox extends acf_field {
 		$atts = array(
 			'type'	=> 'checkbox',
 			'class'	=> 'acf-checkbox-toggle',
-			'label'	=> __("Toggle All", 'acf')
+			'label'	=> __("Toggle All", 'fields')
 		);
 		
 		
@@ -218,7 +218,7 @@ class acf_field_checkbox extends acf_field {
 		
 		
 		// append button
-		$html .= '<li><a href="#" class="button acf-add-checkbox">' . esc_attr__('Add new choice', 'acf') . '</a></li>' . "\n";
+		$html .= '<li><a href="#" class="button acf-add-checkbox">' . esc_attr__('Add new choice', 'fields') . '</a></li>' . "\n";
 		
 		
 		// return
@@ -341,8 +341,8 @@ class acf_field_checkbox extends acf_field {
 		
 		// choices
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Choices','acf'),
-			'instructions'	=> __('Enter each choice on a new line.','acf') . '<br /><br />' . __('For more control, you may specify both a value and label like this:','acf'). '<br /><br />' . __('red : Red','acf'),
+			'label'			=> __('Choices','fields'),
+			'instructions'	=> __('Enter each choice on a new line.','fields') . '<br /><br />' . __('For more control, you may specify both a value and label like this:','fields'). '<br /><br />' . __('red : Red','fields'),
 			'type'			=> 'textarea',
 			'name'			=> 'choices',
 		));	
@@ -350,23 +350,23 @@ class acf_field_checkbox extends acf_field {
 		
 		// other_choice
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Allow Custom','acf'),
+			'label'			=> __('Allow Custom','fields'),
 			'instructions'	=> '',
 			'name'			=> 'allow_custom',
 			'type'			=> 'true_false',
 			'ui'			=> 1,
-			'message'		=> __("Allow 'custom' values to be added", 'acf'),
+			'message'		=> __("Allow 'custom' values to be added", 'fields'),
 		));
 		
 		
 		// save_other_choice
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Save Custom','acf'),
+			'label'			=> __('Save Custom','fields'),
 			'instructions'	=> '',
 			'name'			=> 'save_custom',
 			'type'			=> 'true_false',
 			'ui'			=> 1,
-			'message'		=> __("Save 'custom' values to the field's choices", 'acf'),
+			'message'		=> __("Save 'custom' values to the field's choices", 'fields'),
 			'conditions'	=> array(
 				'field'		=> 'allow_custom',
 				'operator'	=> '==',
@@ -377,8 +377,8 @@ class acf_field_checkbox extends acf_field {
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Default Value','acf'),
-			'instructions'	=> __('Enter each default value on a new line','acf'),
+			'label'			=> __('Default Value','fields'),
+			'instructions'	=> __('Enter each default value on a new line','fields'),
 			'type'			=> 'textarea',
 			'name'			=> 'default_value',
 		));
@@ -386,22 +386,22 @@ class acf_field_checkbox extends acf_field {
 		
 		// layout
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Layout','acf'),
+			'label'			=> __('Layout','fields'),
 			'instructions'	=> '',
 			'type'			=> 'radio',
 			'name'			=> 'layout',
 			'layout'		=> 'horizontal', 
 			'choices'		=> array(
-				'vertical'		=> __("Vertical",'acf'), 
-				'horizontal'	=> __("Horizontal",'acf')
+				'vertical'		=> __("Vertical",'fields'), 
+				'horizontal'	=> __("Horizontal",'fields')
 			)
 		));
 		
 		
 		// layout
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Toggle','acf'),
-			'instructions'	=> __('Prepend an extra checkbox to toggle all choices','acf'),
+			'label'			=> __('Toggle','fields'),
+			'instructions'	=> __('Prepend an extra checkbox to toggle all choices','fields'),
 			'name'			=> 'toggle',
 			'type'			=> 'true_false',
 			'ui'			=> 1,
@@ -410,15 +410,15 @@ class acf_field_checkbox extends acf_field {
 		
 		// return_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Return Value','acf'),
-			'instructions'	=> __('Specify the returned value on front end','acf'),
+			'label'			=> __('Return Value','fields'),
+			'instructions'	=> __('Specify the returned value on front end','fields'),
 			'type'			=> 'radio',
 			'name'			=> 'return_format',
 			'layout'		=> 'horizontal',
 			'choices'		=> array(
-				'value'			=> __('Value','acf'),
-				'label'			=> __('Label','acf'),
-				'array'			=> __('Both (Array)','acf')
+				'value'			=> __('Value','fields'),
+				'label'			=> __('Label','fields'),
+				'array'			=> __('Both (Array)','fields')
 			)
 		));		
 		

@@ -21,7 +21,7 @@ class acf_field_button_group extends acf_field {
 		
 		// vars
 		$this->name = 'button_group';
-		$this->label = __("Button Group",'acf');
+		$this->label = __("Button Group",'fields');
 		$this->category = 'choice';
 		$this->defaults = array(
 			'choices'			=> array(),
@@ -146,8 +146,8 @@ class acf_field_button_group extends acf_field {
 		
 		// choices
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Choices','acf'),
-			'instructions'	=> __('Enter each choice on a new line.','acf') . '<br /><br />' . __('For more control, you may specify both a value and label like this:','acf'). '<br /><br />' . __('red : Red','acf'),
+			'label'			=> __('Choices','fields'),
+			'instructions'	=> __('Enter each choice on a new line.','fields') . '<br /><br />' . __('For more control, you may specify both a value and label like this:','fields'). '<br /><br />' . __('red : Red','fields'),
 			'type'			=> 'textarea',
 			'name'			=> 'choices',
 		));
@@ -155,7 +155,7 @@ class acf_field_button_group extends acf_field {
 		
 		// allow_null
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Allow Null?','acf'),
+			'label'			=> __('Allow Null?','fields'),
 			'instructions'	=> '',
 			'name'			=> 'allow_null',
 			'type'			=> 'true_false',
@@ -165,8 +165,8 @@ class acf_field_button_group extends acf_field {
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Default Value','acf'),
-			'instructions'	=> __('Appears when creating a new post','acf'),
+			'label'			=> __('Default Value','fields'),
+			'instructions'	=> __('Appears when creating a new post','fields'),
 			'type'			=> 'text',
 			'name'			=> 'default_value',
 		));
@@ -174,29 +174,29 @@ class acf_field_button_group extends acf_field {
 		
 		// layout
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Layout','acf'),
+			'label'			=> __('Layout','fields'),
 			'instructions'	=> '',
 			'type'			=> 'radio',
 			'name'			=> 'layout',
 			'layout'		=> 'horizontal', 
 			'choices'		=> array(
-				'horizontal'	=> __("Horizontal",'acf'),
-				'vertical'		=> __("Vertical",'acf'), 
+				'horizontal'	=> __("Horizontal",'fields'),
+				'vertical'		=> __("Vertical",'fields'), 
 			)
 		));
 		
 		
 		// return_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Return Value','acf'),
-			'instructions'	=> __('Specify the returned value on front end','acf'),
+			'label'			=> __('Return Value','fields'),
+			'instructions'	=> __('Specify the returned value on front end','fields'),
 			'type'			=> 'radio',
 			'name'			=> 'return_format',
 			'layout'		=> 'horizontal',
 			'choices'		=> array(
-				'value'			=> __('Value','acf'),
-				'label'			=> __('Label','acf'),
-				'array'			=> __('Both (Array)','acf')
+				'value'			=> __('Value','fields'),
+				'label'			=> __('Label','fields'),
+				'array'			=> __('Both (Array)','fields')
 			)
 		));
 		

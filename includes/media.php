@@ -133,7 +133,7 @@ class ACF_Media {
 	function save_files( $post_id = 0 ) {
 		
 		// bail early if no $_FILES data
-		if( empty($_FILES['acf']['name']) ) {
+		if( empty($_FILES['fields']['name']) ) {
 			return;
 		}
 		

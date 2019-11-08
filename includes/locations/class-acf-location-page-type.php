@@ -24,7 +24,7 @@ class acf_location_page_type extends acf_location {
 		
 		// vars
 		$this->name = 'page_type';
-		$this->label = __("Page Type",'acf');
+		$this->label = __("Page Type",'fields');
 		$this->category = 'page';
     	
 	}
@@ -143,11 +143,11 @@ class acf_location_page_type extends acf_location {
 	function rule_values( $choices, $rule ) {
 		
 		return array(
-			'front_page'	=> __("Front Page",'acf'),
-			'posts_page'	=> __("Posts Page",'acf'),
-			'top_level'		=> __("Top Level Page (no parent)",'acf'),
-			'parent'		=> __("Parent Page (has children)",'acf'),
-			'child'			=> __("Child Page (has parent)",'acf'),
+			'front_page'	=> __("Front Page",'fields'),
+			'posts_page'	=> __("Posts Page",'fields'),
+			'top_level'		=> __("Top Level Page (no parent)",'fields'),
+			'parent'		=> __("Parent Page (has children)",'fields'),
+			'child'			=> __("Child Page (has parent)",'fields'),
 		);
 		
 	}

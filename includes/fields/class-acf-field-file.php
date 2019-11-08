@@ -22,7 +22,7 @@ class acf_field_file extends acf_field {
 		
 		// vars
 		$this->name = 'file';
-		$this->label = __("File",'acf');
+		$this->label = __("File",'fields');
 		$this->category = 'content';
 		$this->defaults = array(
 			'return_format'	=> 'array',
@@ -54,9 +54,9 @@ class acf_field_file extends acf_field {
 		
 		// localize
 		acf_localize_text(array(
-		   	'Select File'	=> __('Select File', 'acf'),
-			'Edit File'		=> __('Edit File', 'acf'),
-			'Update File'	=> __('Update File', 'acf'),
+		   	'Select File'	=> __('Select File', 'fields'),
+			'Edit File'		=> __('Edit File', 'fields'),
+			'Update File'	=> __('Update File', 'fields'),
 	   	));
 	}
 	
@@ -138,20 +138,20 @@ class acf_field_file extends acf_field {
 				<strong data-name="title"><?php echo esc_html($o['title']); ?></strong>
 			</p>
 			<p>
-				<strong><?php _e('File name', 'acf'); ?>:</strong>
+				<strong><?php _e('File name', 'fields'); ?>:</strong>
 				<a data-name="filename" href="<?php echo esc_url($o['url']); ?>" target="_blank"><?php echo esc_html($o['filename']); ?></a>
 			</p>
 			<p>
-				<strong><?php _e('File size', 'acf'); ?>:</strong>
+				<strong><?php _e('File size', 'fields'); ?>:</strong>
 				<span data-name="filesize"><?php echo esc_html($o['filesize']); ?></span>
 			</p>
 		</div>
 		<div class="acf-actions -hover">
 			<?php 
 			if( $uploader != 'basic' ): 
-			?><a class="acf-icon -pencil dark" data-name="edit" href="#" title="<?php _e('Edit', 'acf'); ?>"></a><?php 
+			?><a class="acf-icon -pencil dark" data-name="edit" href="#" title="<?php _e('Edit', 'fields'); ?>"></a><?php 
 			endif;
-			?><a class="acf-icon -cancel dark" data-name="remove" href="#" title="<?php _e('Remove', 'acf'); ?>"></a>
+			?><a class="acf-icon -cancel dark" data-name="remove" href="#" title="<?php _e('Remove', 'fields'); ?>"></a>
 		</div>
 	</div>
 	<div class="hide-if-value">
@@ -167,7 +167,7 @@ class acf_field_file extends acf_field {
 			
 		<?php else: ?>
 			
-			<p><?php _e('No file selected','acf'); ?> <a data-name="add" class="acf-button button" href="#"><?php _e('Add File','acf'); ?></a></p>
+			<p><?php _e('No file selected','fields'); ?> <a data-name="add" class="acf-button button" href="#"><?php _e('Add File','fields'); ?></a></p>
 			
 		<?php endif; ?>
 		
@@ -212,59 +212,59 @@ class acf_field_file extends acf_field {
 		
 		// return_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Return Value','acf'),
-			'instructions'	=> __('Specify the returned value on front end','acf'),
+			'label'			=> __('Return Value','fields'),
+			'instructions'	=> __('Specify the returned value on front end','fields'),
 			'type'			=> 'radio',
 			'name'			=> 'return_format',
 			'layout'		=> 'horizontal',
 			'choices'		=> array(
-				'array'			=> __("File Array",'acf'),
-				'url'			=> __("File URL",'acf'),
-				'id'			=> __("File ID",'acf')
+				'array'			=> __("File Array",'fields'),
+				'url'			=> __("File URL",'fields'),
+				'id'			=> __("File ID",'fields')
 			)
 		));
 		
 		
 		// library
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Library','acf'),
-			'instructions'	=> __('Limit the media library choice','acf'),
+			'label'			=> __('Library','fields'),
+			'instructions'	=> __('Limit the media library choice','fields'),
 			'type'			=> 'radio',
 			'name'			=> 'library',
 			'layout'		=> 'horizontal',
 			'choices' 		=> array(
-				'all'			=> __('All', 'acf'),
-				'uploadedTo'	=> __('Uploaded to post', 'acf')
+				'all'			=> __('All', 'fields'),
+				'uploadedTo'	=> __('Uploaded to post', 'fields')
 			)
 		));
 		
 		
 		// min
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Minimum','acf'),
-			'instructions'	=> __('Restrict which files can be uploaded','acf'),
+			'label'			=> __('Minimum','fields'),
+			'instructions'	=> __('Restrict which files can be uploaded','fields'),
 			'type'			=> 'text',
 			'name'			=> 'min_size',
-			'prepend'		=> __('File size', 'acf'),
+			'prepend'		=> __('File size', 'fields'),
 			'append'		=> 'MB',
 		));
 		
 		
 		// max
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Maximum','acf'),
-			'instructions'	=> __('Restrict which files can be uploaded','acf'),
+			'label'			=> __('Maximum','fields'),
+			'instructions'	=> __('Restrict which files can be uploaded','fields'),
 			'type'			=> 'text',
 			'name'			=> 'max_size',
-			'prepend'		=> __('File size', 'acf'),
+			'prepend'		=> __('File size', 'fields'),
 			'append'		=> 'MB',
 		));
 		
 		
 		// allowed type
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Allowed file types','acf'),
-			'instructions'	=> __('Comma separated list. Leave blank for all types','acf'),
+			'label'			=> __('Allowed file types','fields'),
+			'instructions'	=> __('Comma separated list. Leave blank for all types','fields'),
 			'type'			=> 'text',
 			'name'			=> 'mime_types',
 		));

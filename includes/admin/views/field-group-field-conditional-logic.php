@@ -22,7 +22,7 @@ if( empty($field['conditional_logic']) ) {
 ?>
 <tr class="acf-field acf-field-true-false acf-field-setting-conditional_logic" data-type="true_false" data-name="conditional_logic">
 	<td class="acf-label">
-		<label><?php _e("Conditional Logic",'acf'); ?></label>
+		<label><?php _e("Conditional Logic",'fields'); ?></label>
 	</td>
 	<td class="acf-input">
 		<?php 
@@ -48,7 +48,7 @@ if( empty($field['conditional_logic']) ) {
 				// vars
 				// $group_id must be completely different to $rule_id to avoid JS issues
 				$group_id = "group_{$group_id}";
-				$h4 = ($group_id == "group_0") ? __("Show this field if",'acf') : __("or",'acf');
+				$h4 = ($group_id == "group_0") ? __("Show this field if",'fields') : __("or",'fields');
 				
 				?>
 				<div class="rule-group" data-id="<?php echo $group_id; ?>">
@@ -135,7 +135,7 @@ if( empty($field['conditional_logic']) ) {
 									?>
 								</td>
 								<td class="add">
-									<a href="#" class="button add-conditional-rule"><?php _e("and",'acf'); ?></a>
+									<a href="#" class="button add-conditional-rule"><?php _e("and",'fields'); ?></a>
 								</td>
 								<td class="remove">
 									<a href="#" class="acf-icon -minus remove-conditional-rule"></a>
@@ -148,9 +148,9 @@ if( empty($field['conditional_logic']) ) {
 				</div>
 			<?php endforeach; ?>
 			
-			<h4><?php _e("or",'acf'); ?></h4>
+			<h4><?php _e("or",'fields'); ?></h4>
 			
-			<a href="#" class="button add-conditional-group"><?php _e("Add rule group",'acf'); ?></a>
+			<a href="#" class="button add-conditional-group"><?php _e("Add rule group",'fields'); ?></a>
 			
 		</div>
 		

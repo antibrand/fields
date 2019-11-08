@@ -22,7 +22,7 @@ class acf_field_time_picker extends acf_field {
 		
 		// vars
 		$this->name = 'time_picker';
-		$this->label = __("Time Picker",'acf');
+		$this->label = __("Time Picker",'fields');
 		$this->category = 'jquery';
 		$this->defaults = array(
 			'display_format'		=> 'g:i a',
@@ -106,30 +106,30 @@ class acf_field_time_picker extends acf_field {
 		
 		// display_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Display Format','acf'),
-			'instructions'	=> __('The format displayed when editing a post','acf'),
+			'label'			=> __('Display Format','fields'),
+			'instructions'	=> __('The format displayed when editing a post','fields'),
 			'type'			=> 'radio',
 			'name'			=> 'display_format',
 			'other_choice'	=> 1,
 			'choices'		=> array(
 				'g:i a'	=> '<span>' . $g_i_a . '</span><code>g:i a</code>',
 				'H:i:s'	=> '<span>' . $H_i_s . '</span><code>H:i:s</code>',
-				'other'	=> '<span>' . __('Custom:','acf') . '</span>'
+				'other'	=> '<span>' . __('Custom:','fields') . '</span>'
 			)
 		));
 				
 		
 		// return_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Return Format','acf'),
-			'instructions'	=> __('The format returned via template functions','acf'),
+			'label'			=> __('Return Format','fields'),
+			'instructions'	=> __('The format returned via template functions','fields'),
 			'type'			=> 'radio',
 			'name'			=> 'return_format',
 			'other_choice'	=> 1,
 			'choices'		=> array(
 				'g:i a'	=> '<span>' . $g_i_a . '</span><code>g:i a</code>',
 				'H:i:s'	=> '<span>' . $H_i_s . '</span><code>H:i:s</code>',
-				'other'	=> '<span>' . __('Custom:','acf') . '</span>'
+				'other'	=> '<span>' . __('Custom:','fields') . '</span>'
 			)
 		));
 		

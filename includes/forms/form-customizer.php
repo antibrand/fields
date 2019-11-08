@@ -87,7 +87,7 @@ class acf_form_customizer {
 	function save_widget( $instance, $new_instance, $old_instance, $widget ) {
 		
 		// bail ealry if not valid (customize + acf values + nonce)
-		if( !isset($_POST['wp_customize']) || !isset($new_instance['acf']) || !acf_verify_nonce('widget') ) return $instance;
+		if( !isset($_POST['wp_customize']) || !isset($new_instance['fields']) || !acf_verify_nonce('widget') ) return $instance;
 		
 		
 		// vars
@@ -99,7 +99,7 @@ class acf_form_customizer {
 		
 		
 		// append values
-		$data['values'] = $new_instance['acf'];
+		$data['values'] = $new_instance['fields'];
 		
 		
 		// append fields (name => key relationship) - used later in 'acf/get_field_reference' for customizer previews
@@ -120,7 +120,7 @@ class acf_form_customizer {
 		
 		
 		// append data to instance
-		$instance['acf'] = $data;
+		$instance['fields'] = $data;
 		
 				
 		
@@ -175,11 +175,11 @@ class acf_form_customizer {
 			
 			
 			// bail early if no acf
-			if( !is_array($value) || !isset($value['acf']) ) continue;
+			if( !is_array($value) || !isset($value['fields']) ) continue;
 			
 			
 			// set data	
-			$setting->acf = $value['acf'];
+			$setting->acf = $value['fields'];
 			
 			
 			// append
@@ -361,11 +361,11 @@ class acf_form_customizer {
 		foreach( $value as $i => $widget ) {
 			
 			// bail ealry if no acf
-			if( !isset($widget['acf']) ) continue;
+			if( !isset($widget['fields']) ) continue;
 			
 			
 			// remove widget
-			unset($value[ $i ]['acf']);
+			unset($value[ $i ]['fields']);
 			
 		}
 		
@@ -435,7 +435,7 @@ class acf_form_customizer {
 			
 			
 			// bail ealry if acf is found
-			if( bit.indexOf('acf') !== -1 ) continue;
+			if( bit.indexOf('fields') !== -1 ) continue;
 			
 			
 			// append

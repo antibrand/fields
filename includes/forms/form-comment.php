@@ -163,7 +163,7 @@ class acf_form_comment {
 					//'style'			=> $field_group['style'],
 					'label'			=> $field_group['label_placement'],
 					'edit_url'		=> '',
-					'edit_title'	=> __('Edit field group', 'acf'),
+					'edit_title'	=> __('Edit field group', 'fields'),
 					//'visibility'	=> $visibility
 				);
 				
@@ -290,8 +290,8 @@ class acf_form_comment {
 		
 		
 		// kses
-    	if( isset($_POST['acf']) ) {
-	    	$_POST['acf'] = wp_kses_post_deep( $_POST['acf'] );
+    	if( isset($_POST['fields']) ) {
+	    	$_POST['fields'] = wp_kses_post_deep( $_POST['fields'] );
     	}
 		
 	    

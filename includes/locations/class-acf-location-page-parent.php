@@ -24,7 +24,7 @@ class acf_location_page_parent extends acf_location {
 		
 		// vars
 		$this->name = 'page_parent';
-		$this->label = __("Page Parent",'acf');
+		$this->label = __("Page Parent",'fields');
 		$this->category = 'page';
     	
 	}

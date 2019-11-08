@@ -22,7 +22,7 @@ class acf_field_page_link extends acf_field {
 		
 		// vars
 		$this->name = 'page_link';
-		$this->label = __("Page Link",'acf');
+		$this->label = __("Page Link",'fields');
 		$this->category = 'relational';
 		$this->defaults = array(
 			'post_type'			=> array(),
@@ -174,7 +174,7 @@ class acf_field_page_link extends acf_field {
 			
 			// append
 			$results[] = array(
-				'text'		=> __('Archives', 'acf'),
+				'text'		=> __('Archives', 'fields'),
 				'children'	=> $archives
 			);
 			
@@ -266,7 +266,7 @@ class acf_field_page_link extends acf_field {
 		
 		
 		// look for parent
-		$search = '| ' . __('Parent', 'acf') . ':';
+		$search = '| ' . __('Parent', 'fields') . ':';
 		$pos = strpos($text, $search);
 		
 		if( $pos !== false ) {
@@ -482,7 +482,7 @@ class acf_field_page_link extends acf_field {
 		
 		// post_type
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Filter by Post Type','acf'),
+			'label'			=> __('Filter by Post Type','fields'),
 			'instructions'	=> '',
 			'type'			=> 'select',
 			'name'			=> 'post_type',
@@ -490,13 +490,13 @@ class acf_field_page_link extends acf_field {
 			'multiple'		=> 1,
 			'ui'			=> 1,
 			'allow_null'	=> 1,
-			'placeholder'	=> __("All post types",'acf'),
+			'placeholder'	=> __("All post types",'fields'),
 		));
 		
 		
 		// taxonomy
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Filter by Taxonomy','acf'),
+			'label'			=> __('Filter by Taxonomy','fields'),
 			'instructions'	=> '',
 			'type'			=> 'select',
 			'name'			=> 'taxonomy',
@@ -504,13 +504,13 @@ class acf_field_page_link extends acf_field {
 			'multiple'		=> 1,
 			'ui'			=> 1,
 			'allow_null'	=> 1,
-			'placeholder'	=> __("All taxonomies",'acf'),
+			'placeholder'	=> __("All taxonomies",'fields'),
 		));
 		
 		
 		// allow_null
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Allow Null?','acf'),
+			'label'			=> __('Allow Null?','fields'),
 			'instructions'	=> '',
 			'name'			=> 'allow_null',
 			'type'			=> 'true_false',
@@ -520,7 +520,7 @@ class acf_field_page_link extends acf_field {
 		
 		// allow_archives
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Allow Archives URLs','acf'),
+			'label'			=> __('Allow Archives URLs','fields'),
 			'instructions'	=> '',
 			'name'			=> 'allow_archives',
 			'type'			=> 'true_false',
@@ -530,7 +530,7 @@ class acf_field_page_link extends acf_field {
 		
 		// multiple
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Select multiple values?','acf'),
+			'label'			=> __('Select multiple values?','fields'),
 			'instructions'	=> '',
 			'name'			=> 'multiple',
 			'type'			=> 'true_false',

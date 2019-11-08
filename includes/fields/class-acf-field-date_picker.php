@@ -22,7 +22,7 @@ class acf_field_date_picker extends acf_field {
 		
 		// vars
 		$this->name = 'date_picker';
-		$this->label = __("Date Picker",'acf');
+		$this->label = __("Date Picker",'fields');
 		$this->category = 'jquery';
 		$this->defaults = array(
 			'display_format'	=> 'd/m/Y',
@@ -56,11 +56,11 @@ class acf_field_date_picker extends acf_field {
 	   	global $wp_locale;
 	   	acf_localize_data(array(
 		   	'datePickerL10n'	=> array(
-				'closeText'			=> _x('Done',	'Date Picker JS closeText',		'acf'),
-				'currentText'		=> _x('Today',	'Date Picker JS currentText',	'acf'),
-				'nextText'			=> _x('Next',	'Date Picker JS nextText',		'acf'),
-				'prevText'			=> _x('Prev',	'Date Picker JS prevText',		'acf'),
-				'weekHeader'		=> _x('Wk',		'Date Picker JS weekHeader',	'acf'),
+				'closeText'			=> _x('Done',	'Date Picker JS closeText',		'fields'),
+				'currentText'		=> _x('Today',	'Date Picker JS currentText',	'fields'),
+				'nextText'			=> _x('Next',	'Date Picker JS nextText',		'fields'),
+				'prevText'			=> _x('Prev',	'Date Picker JS prevText',		'fields'),
+				'weekHeader'		=> _x('Wk',		'Date Picker JS weekHeader',	'fields'),
 				'monthNames'        => array_values( $wp_locale->month ),
 				'monthNamesShort'   => array_values( $wp_locale->month_abbrev ),
 				'dayNames'          => array_values( $wp_locale->weekday ),
@@ -175,8 +175,8 @@ class acf_field_date_picker extends acf_field {
 		
 		// display_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Display Format','acf'),
-			'instructions'	=> __('The format displayed when editing a post','acf'),
+			'label'			=> __('Display Format','fields'),
+			'instructions'	=> __('The format displayed when editing a post','fields'),
 			'type'			=> 'radio',
 			'name'			=> 'display_format',
 			'other_choice'	=> 1,
@@ -184,7 +184,7 @@ class acf_field_date_picker extends acf_field {
 				'd/m/Y'			=> '<span>' . $d_m_Y . '</span><code>d/m/Y</code>',
 				'm/d/Y'			=> '<span>' . $m_d_Y . '</span><code>m/d/Y</code>',
 				'F j, Y'		=> '<span>' . $F_j_Y . '</span><code>F j, Y</code>',
-				'other'			=> '<span>' . __('Custom:','acf') . '</span>'
+				'other'			=> '<span>' . __('Custom:','fields') . '</span>'
 			)
 		));
 				
@@ -194,8 +194,8 @@ class acf_field_date_picker extends acf_field {
 			
 			// save_format
 			acf_render_field_setting( $field, array(
-				'label'			=> __('Save Format','acf'),
-				'instructions'	=> __('The format used when saving a value','acf'),
+				'label'			=> __('Save Format','fields'),
+				'instructions'	=> __('The format used when saving a value','fields'),
 				'type'			=> 'text',
 				'name'			=> 'save_format',
 				//'readonly'		=> 1 // this setting was not readonly in v4
@@ -205,8 +205,8 @@ class acf_field_date_picker extends acf_field {
 			
 			// return_format
 			acf_render_field_setting( $field, array(
-				'label'			=> __('Return Format','acf'),
-				'instructions'	=> __('The format returned via template functions','acf'),
+				'label'			=> __('Return Format','fields'),
+				'instructions'	=> __('The format returned via template functions','fields'),
 				'type'			=> 'radio',
 				'name'			=> 'return_format',
 				'other_choice'	=> 1,
@@ -215,7 +215,7 @@ class acf_field_date_picker extends acf_field {
 					'm/d/Y'			=> '<span>' . $m_d_Y . '</span><code>m/d/Y</code>',
 					'F j, Y'		=> '<span>' . $F_j_Y . '</span><code>F j, Y</code>',
 					'Ymd'			=> '<span>' . $Ymd . '</span><code>Ymd</code>',
-					'other'			=> '<span>' . __('Custom:','acf') . '</span>'
+					'other'			=> '<span>' . __('Custom:','fields') . '</span>'
 				)
 			));
 			
@@ -224,7 +224,7 @@ class acf_field_date_picker extends acf_field {
 		
 		// first_day
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Week Starts On','acf'),
+			'label'			=> __('Week Starts On','fields'),
 			'instructions'	=> '',
 			'type'			=> 'select',
 			'name'			=> 'first_day',

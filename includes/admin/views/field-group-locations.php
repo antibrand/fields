@@ -6,8 +6,8 @@ global $field_group;
 ?>
 <div class="acf-field">
 	<div class="acf-label">
-		<label><?php _e("Rules",'acf'); ?></label>
-		<p class="description"><?php _e("Create a set of rules to determine which edit screens will use these advanced custom fields",'acf'); ?></p>
+		<label><?php _e("Rules",'fields'); ?></label>
+		<p class="description"><?php _e("Create a set of rules to determine which edit screens will use these advanced custom fields",'fields'); ?></p>
 	</div>
 	<div class="acf-input">
 		<div class="rule-groups">
@@ -26,9 +26,9 @@ global $field_group;
 			
 			endforeach;	?>
 			
-			<h4><?php _e("or",'acf'); ?></h4>
+			<h4><?php _e("or",'fields'); ?></h4>
 			
-			<a href="#" class="button add-location-group"><?php _e("Add rule group",'acf'); ?></a>
+			<a href="#" class="button add-location-group"><?php _e("Add rule group",'fields'); ?></a>
 			
 		</div>
 	</div>

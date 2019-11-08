@@ -24,7 +24,7 @@ class acf_location_nav_menu extends acf_location {
 		
 		// vars
 		$this->name = 'nav_menu';
-		$this->label = __("Menu",'acf');
+		$this->label = __("Menu",'fields');
 		$this->category = 'forms';
     	
 	}
@@ -99,14 +99,14 @@ class acf_location_nav_menu extends acf_location {
 		
 		// all
 		$choices = array(
-			'all' => __('All', 'acf'),
+			'all' => __('All', 'fields'),
 		);
 		
 		
 		// locations
 		$nav_locations = get_registered_nav_menus();
 		if( !empty($nav_locations) ) {
-			$cat = __('Menu Locations', 'acf');
+			$cat = __('Menu Locations', 'fields');
 			foreach( $nav_locations as $slug => $title ) {
 				$choices[ $cat ][ 'location/'.$slug ] = $title;
 			}
@@ -116,7 +116,7 @@ class acf_location_nav_menu extends acf_location {
 		// specific menus
 		$nav_menus = wp_get_nav_menus();
 		if( !empty($nav_menus) ) {
-			$cat = __('Menus', 'acf');
+			$cat = __('Menus', 'fields');
 			foreach( $nav_menus as $nav_menu ) {
 				$choices[ $cat ][ $nav_menu->term_id ] = $nav_menu->name;
 			}

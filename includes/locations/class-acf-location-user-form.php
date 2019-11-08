@@ -19,7 +19,7 @@ class ACF_Location_User_Form extends ACF_Location {
 	 */
 	function initialize() {
 		$this->name = 'user_form';
-		$this->label = __("User Form", 'acf');
+		$this->label = __("User Form", 'fields');
 		$this->category = 'user';
 	}
 	
@@ -69,10 +69,10 @@ class ACF_Location_User_Form extends ACF_Location {
 	 */
 	function rule_values( $choices, $rule ) {
 		return array(
-			'all' 		=> __('All', 'acf'),
-			'add' 		=> __('Add', 'acf'),
-			'edit' 		=> __('Add / Edit', 'acf'),
-			'register' 	=> __('Register', 'acf')
+			'all' 		=> __('All', 'fields'),
+			'add' 		=> __('Add', 'fields'),
+			'edit' 		=> __('Add / Edit', 'fields'),
+			'register' 	=> __('Register', 'fields')
 		);		
 	}
 }

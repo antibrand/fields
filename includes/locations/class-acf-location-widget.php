@@ -24,7 +24,7 @@ class acf_location_widget extends acf_location {
 		
 		// vars
 		$this->name = 'widget';
-		$this->label = __("Widget",'acf');
+		$this->label = __("Widget",'fields');
 		$this->category = 'forms';
     	
 	}
@@ -80,7 +80,7 @@ class acf_location_widget extends acf_location {
 		
 		
 		// vars
-		$choices = array( 'all' => __('All', 'acf') );
+		$choices = array( 'all' => __('All', 'fields') );
 		
 		
 		// loop

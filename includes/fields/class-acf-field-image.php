@@ -22,7 +22,7 @@ class acf_field_image extends acf_field {
 		
 		// vars
 		$this->name = 'image';
-		$this->label = __("Image",'acf');
+		$this->label = __("Image",'fields');
 		$this->category = 'content';
 		$this->defaults = array(
 			'return_format'	=> 'array',
@@ -60,10 +60,10 @@ class acf_field_image extends acf_field {
 		
 		// localize
 		acf_localize_text(array(
-		   	'Select Image'	=> __('Select Image', 'acf'),
-			'Edit Image'	=> __('Edit Image', 'acf'),
-			'Update Image'	=> __('Update Image', 'acf'),
-			'All images'	=> __('All images', 'acf'),
+		   	'Select Image'	=> __('Select Image', 'fields'),
+			'Edit Image'	=> __('Edit Image', 'fields'),
+			'Update Image'	=> __('Update Image', 'fields'),
+			'All images'	=> __('All images', 'fields'),
 	   	));
 	}
 	
@@ -135,9 +135,9 @@ class acf_field_image extends acf_field {
 		<div class="acf-actions -hover">
 			<?php 
 			if( $uploader != 'basic' ): 
-			?><a class="acf-icon -pencil dark" data-name="edit" href="#" title="<?php _e('Edit', 'acf'); ?>"></a><?php 
+			?><a class="acf-icon -pencil dark" data-name="edit" href="#" title="<?php _e('Edit', 'fields'); ?>"></a><?php 
 			endif;
-			?><a class="acf-icon -cancel dark" data-name="remove" href="#" title="<?php _e('Remove', 'acf'); ?>"></a>
+			?><a class="acf-icon -cancel dark" data-name="remove" href="#" title="<?php _e('Remove', 'fields'); ?>"></a>
 		</div>
 	</div>
 	<div class="hide-if-value">
@@ -153,7 +153,7 @@ class acf_field_image extends acf_field {
 			
 		<?php else: ?>
 			
-			<p><?php _e('No image selected','acf'); ?> <a data-name="add" class="acf-button button" href="#"><?php _e('Add Image','acf'); ?></a></p>
+			<p><?php _e('No image selected','fields'); ?> <a data-name="add" class="acf-button button" href="#"><?php _e('Add Image','fields'); ?></a></p>
 			
 		<?php endif; ?>
 	</div>
@@ -201,22 +201,22 @@ class acf_field_image extends acf_field {
 		
 		// return_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Return Format','acf'),
+			'label'			=> __('Return Format','fields'),
 			'instructions'	=> '',
 			'type'			=> 'radio',
 			'name'			=> 'return_format',
 			'layout'		=> 'horizontal',
 			'choices'		=> array(
-				'array'			=> __("Image Array",'acf'),
-				'url'			=> __("Image URL",'acf'),
-				'id'			=> __("Image ID",'acf')
+				'array'			=> __("Image Array",'fields'),
+				'url'			=> __("Image URL",'fields'),
+				'id'			=> __("Image ID",'fields')
 			)
 		));
 		
 		
 		// preview_size
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Preview Size','acf'),
+			'label'			=> __('Preview Size','fields'),
 			'instructions'	=> '',
 			'type'			=> 'select',
 			'name'			=> 'preview_size',
@@ -226,25 +226,25 @@ class acf_field_image extends acf_field {
 		
 		// library
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Library','acf'),
-			'instructions'	=> __('Limit the media library choice','acf'),
+			'label'			=> __('Library','fields'),
+			'instructions'	=> __('Limit the media library choice','fields'),
 			'type'			=> 'radio',
 			'name'			=> 'library',
 			'layout'		=> 'horizontal',
 			'choices' 		=> array(
-				'all'			=> __('All', 'acf'),
-				'uploadedTo'	=> __('Uploaded to post', 'acf')
+				'all'			=> __('All', 'fields'),
+				'uploadedTo'	=> __('Uploaded to post', 'fields')
 			)
 		));
 		
 		
 		// min
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Minimum','acf'),
-			'instructions'	=> __('Restrict which images can be uploaded','acf'),
+			'label'			=> __('Minimum','fields'),
+			'instructions'	=> __('Restrict which images can be uploaded','fields'),
 			'type'			=> 'text',
 			'name'			=> 'min_width',
-			'prepend'		=> __('Width', 'acf'),
+			'prepend'		=> __('Width', 'fields'),
 			'append'		=> 'px',
 		));
 		
@@ -252,7 +252,7 @@ class acf_field_image extends acf_field {
 			'label'			=> '',
 			'type'			=> 'text',
 			'name'			=> 'min_height',
-			'prepend'		=> __('Height', 'acf'),
+			'prepend'		=> __('Height', 'fields'),
 			'append'		=> 'px',
 			'_append' 		=> 'min_width'
 		));
@@ -261,7 +261,7 @@ class acf_field_image extends acf_field {
 			'label'			=> '',
 			'type'			=> 'text',
 			'name'			=> 'min_size',
-			'prepend'		=> __('File size', 'acf'),
+			'prepend'		=> __('File size', 'fields'),
 			'append'		=> 'MB',
 			'_append' 		=> 'min_width'
 		));	
@@ -269,11 +269,11 @@ class acf_field_image extends acf_field {
 		
 		// max
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Maximum','acf'),
-			'instructions'	=> __('Restrict which images can be uploaded','acf'),
+			'label'			=> __('Maximum','fields'),
+			'instructions'	=> __('Restrict which images can be uploaded','fields'),
 			'type'			=> 'text',
 			'name'			=> 'max_width',
-			'prepend'		=> __('Width', 'acf'),
+			'prepend'		=> __('Width', 'fields'),
 			'append'		=> 'px',
 		));
 		
@@ -281,7 +281,7 @@ class acf_field_image extends acf_field {
 			'label'			=> '',
 			'type'			=> 'text',
 			'name'			=> 'max_height',
-			'prepend'		=> __('Height', 'acf'),
+			'prepend'		=> __('Height', 'fields'),
 			'append'		=> 'px',
 			'_append' 		=> 'max_width'
 		));
@@ -290,7 +290,7 @@ class acf_field_image extends acf_field {
 			'label'			=> '',
 			'type'			=> 'text',
 			'name'			=> 'max_size',
-			'prepend'		=> __('File size', 'acf'),
+			'prepend'		=> __('File size', 'fields'),
 			'append'		=> 'MB',
 			'_append' 		=> 'max_width'
 		));	
@@ -298,8 +298,8 @@ class acf_field_image extends acf_field {
 		
 		// allowed type
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Allowed file types','acf'),
-			'instructions'	=> __('Comma separated list. Leave blank for all types','acf'),
+			'label'			=> __('Allowed file types','fields'),
+			'instructions'	=> __('Comma separated list. Leave blank for all types','fields'),
 			'type'			=> 'text',
 			'name'			=> 'mime_types',
 		));

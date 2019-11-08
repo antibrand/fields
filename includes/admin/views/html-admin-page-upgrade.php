@@ -23,14 +23,14 @@
 </style>
 <div id="acf-upgrade-wrap" class="wrap">
 	
-	<h1><?php _e("Upgrade Database", 'acf'); ?></h1>
+	<h1><?php _e("Upgrade Database", 'fields'); ?></h1>
 	
 <?php if( acf_has_upgrade() ): ?>
 
-	<p><?php _e('Reading upgrade tasks...', 'acf'); ?></p>
-	<p class="step-1"><i class="acf-loading"></i> <?php printf(__('Upgrading data to version %s', 'acf'), ACF_VERSION); ?></p>
+	<p><?php _e('Reading upgrade tasks...', 'fields'); ?></p>
+	<p class="step-1"><i class="acf-loading"></i> <?php printf(__('Upgrading data to version %s', 'fields'), ACF_VERSION); ?></p>
 	<p class="step-2"></p>
-	<p class="step-3"><?php echo sprintf( __('Database upgrade complete. <a href="%s">See what\'s new</a>', 'acf' ), admin_url('edit.php?post_type=acf-field-group&page=acf-settings-info') ); ?></p>
+	<p class="step-3"><?php echo sprintf( __('Database upgrade complete. <a href="%s">See what\'s new</a>', 'fields' ), admin_url('edit.php?post_type=acf-field-group&page=acf-settings-info') ); ?></p>
 	
 	<script type="text/javascript">
 	(function($) {
@@ -75,7 +75,7 @@
 						} else {
 							
 							// set response text
-							response = '<?php _e('Upgrade failed.', 'acf'); ?>';
+							response = '<?php _e('Upgrade failed.', 'fields'); ?>';
 							if( jsonText = acf.getAjaxError(json) ) {
 								response += ' <pre>' + jsonText +  '</pre>';
 							}
@@ -84,7 +84,7 @@
 					error: function( jqXHR, textStatus, errorThrown ){
 						
 						// set response text
-						response = '<?php _e('Upgrade failed.', 'acf'); ?>';
+						response = '<?php _e('Upgrade failed.', 'fields'); ?>';
 						if( errorThrown) {
 							response += ' <pre>' + errorThrown +  '</pre>';
 						}
@@ -113,7 +113,7 @@
 
 <?php else: ?>
 
-	<p><?php _e('No updates available.', 'acf'); ?></p>
+	<p><?php _e('No updates available.', 'fields'); ?></p>
 	
 <?php endif; ?>
 </div>

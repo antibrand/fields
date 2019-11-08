@@ -148,7 +148,7 @@ function acf_upgrade_500_field_groups() {
 	// get old field groups
 	$ofgs = get_posts(array(
 		'numberposts' 		=> -1,
-		'post_type' 		=> 'acf',
+		'post_type' 		=> 'fields',
 		'orderby' 			=> 'menu_order title',
 		'order' 			=> 'asc',
 		'suppress_filters'	=> true,

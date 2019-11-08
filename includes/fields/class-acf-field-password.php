@@ -22,7 +22,7 @@ class acf_field_password extends acf_field {
 		
 		// vars
 		$this->name = 'password';
-		$this->label = __("Password",'acf');
+		$this->label = __("Password",'fields');
 		$this->defaults = array(
 			'placeholder'	=> '',
 			'prepend'		=> '',
@@ -68,8 +68,8 @@ class acf_field_password extends acf_field {
 		
 		// placeholder
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Placeholder Text','acf'),
-			'instructions'	=> __('Appears within the input','acf'),
+			'label'			=> __('Placeholder Text','fields'),
+			'instructions'	=> __('Appears within the input','fields'),
 			'type'			=> 'text',
 			'name'			=> 'placeholder',
 		));
@@ -77,8 +77,8 @@ class acf_field_password extends acf_field {
 		
 		// prepend
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Prepend','acf'),
-			'instructions'	=> __('Appears before the input','acf'),
+			'label'			=> __('Prepend','fields'),
+			'instructions'	=> __('Appears before the input','fields'),
 			'type'			=> 'text',
 			'name'			=> 'prepend',
 		));
@@ -86,8 +86,8 @@ class acf_field_password extends acf_field {
 		
 		// append
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Append','acf'),
-			'instructions'	=> __('Appears after the input','acf'),
+			'label'			=> __('Append','fields'),
+			'instructions'	=> __('Appears after the input','fields'),
 			'type'			=> 'text',
 			'name'			=> 'append',
 		));

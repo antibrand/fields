@@ -22,7 +22,7 @@ class acf_field_true_false extends acf_field {
 		
 		// vars
 		$this->name = 'true_false';
-		$this->label = __('True / False','acf');
+		$this->label = __('True / False','fields');
 		$this->category = 'choice';
 		$this->defaults = array(
 			'default_value'	=> 0,
@@ -76,8 +76,8 @@ class acf_field_true_false extends acf_field {
 		if( $field['ui'] ) {
 			
 			// vars
-			if( $field['ui_on_text'] === '' ) $field['ui_on_text'] = __('Yes', 'acf');
-			if( $field['ui_off_text'] === '' ) $field['ui_off_text'] = __('No', 'acf');
+			if( $field['ui_on_text'] === '' ) $field['ui_on_text'] = __('Yes', 'fields');
+			if( $field['ui_off_text'] === '' ) $field['ui_off_text'] = __('No', 'fields');
 			
 			
 			// update input
@@ -123,8 +123,8 @@ class acf_field_true_false extends acf_field {
 		
 		// message
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Message','acf'),
-			'instructions'	=> __('Displays text alongside the checkbox','acf'),
+			'label'			=> __('Message','fields'),
+			'instructions'	=> __('Displays text alongside the checkbox','fields'),
 			'type'			=> 'text',
 			'name'			=> 'message',
 		));
@@ -132,7 +132,7 @@ class acf_field_true_false extends acf_field {
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Default Value','acf'),
+			'label'			=> __('Default Value','fields'),
 			'instructions'	=> '',
 			'type'			=> 'true_false',
 			'name'			=> 'default_value',
@@ -141,7 +141,7 @@ class acf_field_true_false extends acf_field {
 		
 		// ui
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Stylised UI','acf'),
+			'label'			=> __('Stylised UI','fields'),
 			'instructions'	=> '',
 			'type'			=> 'true_false',
 			'name'			=> 'ui',
@@ -152,11 +152,11 @@ class acf_field_true_false extends acf_field {
 		
 		// on_text
 		acf_render_field_setting( $field, array(
-			'label'			=> __('On Text','acf'),
-			'instructions'	=> __('Text shown when active','acf'),
+			'label'			=> __('On Text','fields'),
+			'instructions'	=> __('Text shown when active','fields'),
 			'type'			=> 'text',
 			'name'			=> 'ui_on_text',
-			'placeholder'	=> __('Yes', 'acf'),
+			'placeholder'	=> __('Yes', 'fields'),
 			'conditions'	=> array(
 				'field'		=> 'ui',
 				'operator'	=> '==',
@@ -167,11 +167,11 @@ class acf_field_true_false extends acf_field {
 		
 		// on_text
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Off Text','acf'),
-			'instructions'	=> __('Text shown when inactive','acf'),
+			'label'			=> __('Off Text','fields'),
+			'instructions'	=> __('Text shown when inactive','fields'),
 			'type'			=> 'text',
 			'name'			=> 'ui_off_text',
-			'placeholder'	=> __('No', 'acf'),
+			'placeholder'	=> __('No', 'fields'),
 			'conditions'	=> array(
 				'field'		=> 'ui',
 				'operator'	=> '==',

@@ -22,7 +22,7 @@ class acf_field_text extends acf_field {
 		
 		// vars
 		$this->name = 'text';
-		$this->label = __("Text",'acf');
+		$this->label = __("Text",'fields');
 		$this->defaults = array(
 			'default_value'	=> '',
 			'maxlength'		=> '',
@@ -92,8 +92,8 @@ class acf_field_text extends acf_field {
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Default Value','acf'),
-			'instructions'	=> __('Appears when creating a new post','acf'),
+			'label'			=> __('Default Value','fields'),
+			'instructions'	=> __('Appears when creating a new post','fields'),
 			'type'			=> 'text',
 			'name'			=> 'default_value',
 		));
@@ -101,8 +101,8 @@ class acf_field_text extends acf_field {
 		
 		// placeholder
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Placeholder Text','acf'),
-			'instructions'	=> __('Appears within the input','acf'),
+			'label'			=> __('Placeholder Text','fields'),
+			'instructions'	=> __('Appears within the input','fields'),
 			'type'			=> 'text',
 			'name'			=> 'placeholder',
 		));
@@ -110,8 +110,8 @@ class acf_field_text extends acf_field {
 		
 		// prepend
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Prepend','acf'),
-			'instructions'	=> __('Appears before the input','acf'),
+			'label'			=> __('Prepend','fields'),
+			'instructions'	=> __('Appears before the input','fields'),
 			'type'			=> 'text',
 			'name'			=> 'prepend',
 		));
@@ -119,8 +119,8 @@ class acf_field_text extends acf_field {
 		
 		// append
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Append','acf'),
-			'instructions'	=> __('Appears after the input','acf'),
+			'label'			=> __('Append','fields'),
+			'instructions'	=> __('Appears after the input','fields'),
 			'type'			=> 'text',
 			'name'			=> 'append',
 		));
@@ -128,8 +128,8 @@ class acf_field_text extends acf_field {
 		
 		// maxlength
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Character Limit','acf'),
-			'instructions'	=> __('Leave blank for no limit','acf'),
+			'label'			=> __('Character Limit','fields'),
+			'instructions'	=> __('Leave blank for no limit','fields'),
 			'type'			=> 'number',
 			'name'			=> 'maxlength',
 		));
@@ -154,7 +154,7 @@ class acf_field_text extends acf_field {
 		
 		// Check maxlength
 		if( $field['maxlength'] && mb_strlen(wp_unslash($value)) > $field['maxlength'] ) {
-			return sprintf( __('Value must not exceed %d characters', 'acf'), $field['maxlength'] );
+			return sprintf( __('Value must not exceed %d characters', 'fields'), $field['maxlength'] );
 		}
 		
 		// Return.

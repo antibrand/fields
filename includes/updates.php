@@ -270,7 +270,7 @@ class ACF_Updates {
 				'wp_language'	=> get_bloginfo('language'),
 				'wp_timezone'	=> get_option('timezone_string'),
 			)),
-			'acf'			=> wp_json_encode(array(
+			'fields'			=> wp_json_encode(array(
 				'acf_version'	=> get_option('acf_version'),
 				'acf_pro'		=> (defined('ACF_PRO') && ACF_PRO),
 			)),

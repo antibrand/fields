@@ -90,10 +90,10 @@ class acf_locations {
 		// vars
 		$groups = array();
 		$l10n = array(
-			'post'		=> __('Post', 'acf'),
-			'page'		=> __('Page', 'acf'),
-			'user'		=> __('User', 'acf'),
-			'forms'		=> __('Forms', 'acf'),
+			'post'		=> __('Post', 'fields'),
+			'page'		=> __('Page', 'fields'),
+			'user'		=> __('User', 'fields'),
+			'forms'		=> __('Forms', 'fields'),
 		);
 		
 			
@@ -240,8 +240,8 @@ function acf_get_location_rule_operators( $rule ) {
 	
 	// vars
 	$operators = array(
-		'=='	=> __("is equal to",'acf'),
-		'!='	=> __("is not equal to",'acf'),
+		'=='	=> __("is equal to",'fields'),
+		'!='	=> __("is not equal to",'fields'),
 	);
 	
 	

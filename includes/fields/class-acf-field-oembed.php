@@ -22,7 +22,7 @@ class acf_field_oembed extends acf_field {
 		
 		// vars
 		$this->name = 'oembed';
-		$this->label = __("oEmbed",'acf');
+		$this->label = __("oEmbed",'fields');
 		$this->category = 'content';
 		$this->defaults = array(
 			'width'		=> '',
@@ -202,7 +202,7 @@ class acf_field_oembed extends acf_field {
 			'class' => 'acf-oembed',
 		);
 		
-		// <strong><?php _e("Error.", 'acf'); </strong> _e("No embed found for the given URL.", 'acf');
+		// <strong><?php _e("Error.", 'fields'); </strong> _e("No embed found for the given URL.", 'fields');
 		
 		// value
 		if( $field['value'] ) $atts['class'] .= ' has-value';
@@ -213,7 +213,7 @@ class acf_field_oembed extends acf_field {
 	<?php acf_hidden_input(array( 'class' => 'input-value', 'name' => $field['name'], 'value' => $field['value'] )); ?>
 	
 	<div class="title">
-		<?php acf_text_input(array( 'class' => 'input-search', 'value' => $field['value'], 'placeholder' => __("Enter URL", 'acf'), 'autocomplete' => 'off'  )); ?>
+		<?php acf_text_input(array( 'class' => 'input-search', 'value' => $field['value'], 'placeholder' => __("Enter URL", 'fields'), 'autocomplete' => 'off'  )); ?>
 		<div class="acf-actions -hover">
 			<a data-name="clear-button" href="#" class="acf-icon -cancel grey"></a>
 		</div>
@@ -251,10 +251,10 @@ class acf_field_oembed extends acf_field {
 		
 		// width
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Embed Size','acf'),
+			'label'			=> __('Embed Size','fields'),
 			'type'			=> 'text',
 			'name'			=> 'width',
-			'prepend'		=> __('Width', 'acf'),
+			'prepend'		=> __('Width', 'fields'),
 			'append'		=> 'px',
 			'placeholder'	=> $this->width
 		));
@@ -262,10 +262,10 @@ class acf_field_oembed extends acf_field {
 		
 		// height
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Embed Size','acf'),
+			'label'			=> __('Embed Size','fields'),
 			'type'			=> 'text',
 			'name'			=> 'height',
-			'prepend'		=> __('Height', 'acf'),
+			'prepend'		=> __('Height', 'fields'),
 			'append'		=> 'px',
 			'placeholder'	=> $this->height,
 			'_append' 		=> 'width'

@@ -165,45 +165,45 @@ class ACF_Assets {
 		acf_localize_text(array(
 			
 			// unload
-			'The changes you made will be lost if you navigate away from this page'	=> __('The changes you made will be lost if you navigate away from this page', 'acf'),
+			'The changes you made will be lost if you navigate away from this page'	=> __('The changes you made will be lost if you navigate away from this page', 'fields'),
 			
 			// media
-			'Select.verb'			=> _x('Select', 'verb', 'acf'),
-			'Edit.verb'				=> _x('Edit', 'verb', 'acf'),
-			'Update.verb'			=> _x('Update', 'verb', 'acf'),
-			'Uploaded to this post'	=> __('Uploaded to this post', 'acf'),
-			'Expand Details' 		=> __('Expand Details', 'acf'),
-			'Collapse Details' 		=> __('Collapse Details', 'acf'),
-			'Restricted'			=> __('Restricted', 'acf'),
-			'All images'			=> __('All images', 'acf'),
+			'Select.verb'			=> _x('Select', 'verb', 'fields'),
+			'Edit.verb'				=> _x('Edit', 'verb', 'fields'),
+			'Update.verb'			=> _x('Update', 'verb', 'fields'),
+			'Uploaded to this post'	=> __('Uploaded to this post', 'fields'),
+			'Expand Details' 		=> __('Expand Details', 'fields'),
+			'Collapse Details' 		=> __('Collapse Details', 'fields'),
+			'Restricted'			=> __('Restricted', 'fields'),
+			'All images'			=> __('All images', 'fields'),
 			
 			// validation
-			'Validation successful'			=> __('Validation successful', 'acf'),
-			'Validation failed'				=> __('Validation failed', 'acf'),
-			'1 field requires attention'	=> __('1 field requires attention', 'acf'),
-			'%d fields require attention'	=> __('%d fields require attention', 'acf'),
+			'Validation successful'			=> __('Validation successful', 'fields'),
+			'Validation failed'				=> __('Validation failed', 'fields'),
+			'1 field requires attention'	=> __('1 field requires attention', 'fields'),
+			'%d fields require attention'	=> __('%d fields require attention', 'fields'),
 			
 			// tooltip
-			'Are you sure?'			=> __('Are you sure?','acf'),
-			'Yes'					=> __('Yes','acf'),
-			'No'					=> __('No','acf'),
-			'Remove'				=> __('Remove','acf'),
-			'Cancel'				=> __('Cancel','acf'),
+			'Are you sure?'			=> __('Are you sure?','fields'),
+			'Yes'					=> __('Yes','fields'),
+			'No'					=> __('No','fields'),
+			'Remove'				=> __('Remove','fields'),
+			'Cancel'				=> __('Cancel','fields'),
 			
 			// conditions
-			'Has any value'				=> __('Has any value', 'acf'),
-			'Has no value'				=> __('Has no value', 'acf'),
-			'Value is equal to'			=> __('Value is equal to', 'acf'),
-			'Value is not equal to'		=> __('Value is not equal to', 'acf'),
-			'Value matches pattern'		=> __('Value matches pattern', 'acf'),
-			'Value contains'			=> __('Value contains', 'acf'),
-			'Value is greater than'		=> __('Value is greater than', 'acf'),
-			'Value is less than'		=> __('Value is less than', 'acf'),
-			'Selection is greater than'	=> __('Selection is greater than', 'acf'),
-			'Selection is less than'	=> __('Selection is less than', 'acf'),
+			'Has any value'				=> __('Has any value', 'fields'),
+			'Has no value'				=> __('Has no value', 'fields'),
+			'Value is equal to'			=> __('Value is equal to', 'fields'),
+			'Value is not equal to'		=> __('Value is not equal to', 'fields'),
+			'Value matches pattern'		=> __('Value matches pattern', 'fields'),
+			'Value contains'			=> __('Value contains', 'fields'),
+			'Value is greater than'		=> __('Value is greater than', 'fields'),
+			'Value is less than'		=> __('Value is less than', 'fields'),
+			'Selection is greater than'	=> __('Selection is greater than', 'fields'),
+			'Selection is less than'	=> __('Selection is less than', 'fields'),
 			
 			// misc
-			'Edit field group'	=> __('Edit field group', 'acf'),
+			'Edit field group'	=> __('Edit field group', 'fields'),
 		));
 	}
 	

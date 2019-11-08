@@ -30,12 +30,12 @@ class ACF_Admin_Tool_Export extends ACF_Admin_Tool {
 		
 		// vars
 		$this->name = 'export';
-		$this->title = __("Export Field Groups", 'acf');
+		$this->title = __("Export Field Groups", 'fields');
     	
     	
     	// active
     	if( $this->is_active() ) {
-			$this->title .= ' - ' . __('Generate PHP', 'acf');
+			$this->title .= ' - ' . __('Generate PHP', 'fields');
 		}
 		
 	}
@@ -94,7 +94,7 @@ class ACF_Admin_Tool_Export extends ACF_Admin_Tool {
 		
 		// validate
 		if( $json === false ) {
-			return acf_add_admin_notice( __("No field groups selected", 'acf'), 'warning' );
+			return acf_add_admin_notice( __("No field groups selected", 'fields'), 'warning' );
 		}
 		
 		
@@ -132,7 +132,7 @@ class ACF_Admin_Tool_Export extends ACF_Admin_Tool {
 		
 		// validate
 		if( !$keys ) {
-			return acf_add_admin_notice( __("No field groups selected", 'acf'), 'warning' );
+			return acf_add_admin_notice( __("No field groups selected", 'fields'), 'warning' );
 		}
 		
 		
@@ -171,7 +171,7 @@ class ACF_Admin_Tool_Export extends ACF_Admin_Tool {
 	    	// add notice
 	    	if( $selected ) {
 		    	$count = count($selected);
-		    	$text = sprintf( _n( 'Exported 1 field group.', 'Exported %s field groups.', $count, 'acf' ), $count );
+		    	$text = sprintf( _n( 'Exported 1 field group.', 'Exported %s field groups.', $count, 'fields' ), $count );
 		    	acf_add_admin_notice( $text, 'success' );
 	    	}
 		}
@@ -238,7 +238,7 @@ class ACF_Admin_Tool_Export extends ACF_Admin_Tool {
 		
 		// render
 		acf_render_field_wrap(array(
-			'label'		=> __('Select Field Groups', 'acf'),
+			'label'		=> __('Select Field Groups', 'fields'),
 			'type'		=> 'checkbox',
 			'name'		=> 'keys',
 			'prefix'	=> false,
@@ -266,7 +266,7 @@ class ACF_Admin_Tool_Export extends ACF_Admin_Tool {
 		
 		?>
 		<div class="acf-panel acf-panel-selection">
-			<h3 class="acf-panel-title"><?php _e('Select Field Groups', 'acf') ?> <i class="dashicons dashicons-arrow-right"></i></h3>
+			<h3 class="acf-panel-title"><?php _e('Select Field Groups', 'fields') ?> <i class="dashicons dashicons-arrow-right"></i></h3>
 			<div class="acf-panel-inside">
 				<?php $this->html_field_selection(); ?>
 			</div>
@@ -292,20 +292,20 @@ class ACF_Admin_Tool_Export extends ACF_Admin_Tool {
 		
 		?>
 		<div class="acf-panel acf-panel-settings">
-			<h3 class="acf-panel-title"><?php _e('Settings', 'acf') ?> <i class="dashicons dashicons-arrow-right"></i></h3>
+			<h3 class="acf-panel-title"><?php _e('Settings', 'fields') ?> <i class="dashicons dashicons-arrow-right"></i></h3>
 			<div class="acf-panel-inside">
 				<?php 
 			
 /*
 				acf_render_field_wrap(array(
-					'label'		=> __('Empty settings', 'acf'),
+					'label'		=> __('Empty settings', 'fields'),
 					'type'		=> 'select',
 					'name'		=> 'minimal',
 					'prefix'	=> false,
 					'value'		=> '',
 					'choices'	=> array(
-						'all'		=> __('Include all settings', 'acf'),
-						'minimal'	=> __('Ignore empty settings', 'acf'),
+						'all'		=> __('Include all settings', 'fields'),
+						'minimal'	=> __('Ignore empty settings', 'fields'),
 					)
 				));
 */
@@ -333,13 +333,13 @@ class ACF_Admin_Tool_Export extends ACF_Admin_Tool {
 	function html_archive() {
 		
 		?>
-		<p><?php _e('Select the field groups you would like to export and then select your export method. Use the download button to export to a .json file which you can then import to another ACF installation. Use the generate button to export to PHP code which you can place in your theme.', 'acf'); ?></p>
+		<p><?php _e('Select the field groups you would like to export and then select your export method. Use the download button to export to a .json file which you can then import to another ACF installation. Use the generate button to export to PHP code which you can place in your theme.', 'fields'); ?></p>
 		<div class="acf-fields">
 			<?php $this->html_field_selection(); ?>
 		</div>
 		<p class="acf-submit">
-			<button type="submit" name="action" class="button button-primary" value="download"><?php _e('Export File', 'acf'); ?></button>
-			<button type="submit" name="action" class="button" value="generate"><?php _e('Generate PHP', 'acf'); ?></button>
+			<button type="submit" name="action" class="button button-primary" value="download"><?php _e('Export File', 'fields'); ?></button>
+			<button type="submit" name="action" class="button" value="generate"><?php _e('Generate PHP', 'fields'); ?></button>
 		</p>
 		<?php
 		
@@ -368,7 +368,7 @@ class ACF_Admin_Tool_Export extends ACF_Admin_Tool {
 			<div class="acf-postbox-side">
 				<?php $this->html_panel_selection(); ?>
 				<p class="acf-submit">
-					<button type="submit" name="action" class="button button-primary" value="generate"><?php _e('Generate PHP', 'acf'); ?></button>
+					<button type="submit" name="action" class="button button-primary" value="generate"><?php _e('Generate PHP', 'fields'); ?></button>
 				</p>
 			</div>
 		</div>
@@ -411,7 +411,7 @@ class ACF_Admin_Tool_Export extends ACF_Admin_Tool {
 
 
 		?>
-		<p><?php _e("The following code can be used to register a local version of the selected field group(s). A local field group can provide many benefits such as faster load times, version control & dynamic fields/settings. Simply copy and paste the following code to your theme's functions.php file or include it within an external file.", 'acf'); ?></p>
+		<p><?php _e("The following code can be used to register a local version of the selected field group(s). A local field group can provide many benefits such as faster load times, version control & dynamic fields/settings. Simply copy and paste the following code to your theme's functions.php file or include it within an external file.", 'fields'); ?></p>
 		<textarea id="acf-export-textarea" readonly="true"><?php
 		
 		echo "if( function_exists('acf_add_local_field_group') ):" . "\r\n" . "\r\n";
@@ -443,7 +443,7 @@ class ACF_Admin_Tool_Export extends ACF_Admin_Tool {
 		
 		?></textarea>
 		<p class="acf-submit">
-			<a class="button" id="acf-export-copy"><?php _e( 'Copy to clipboard', 'acf' ); ?></a>
+			<a class="button" id="acf-export-copy"><?php _e( 'Copy to clipboard', 'fields' ); ?></a>
 		</p>
 		<script type="text/javascript">
 		(function($){
@@ -480,7 +480,7 @@ class ACF_Admin_Tool_Export extends ACF_Admin_Tool {
 					
 					// tooltip
 					acf.newTooltip({
-						text: 		"<?php _e('Copied', 'acf' ); ?>",
+						text: 		"<?php _e('Copied', 'fields' ); ?>",
 						timeout:	250,
 						target: 	$(this),
 					});

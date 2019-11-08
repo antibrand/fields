@@ -22,7 +22,7 @@ class acf_field_number extends acf_field {
 		
 		// vars
 		$this->name = 'number';
-		$this->label = __("Number",'acf');
+		$this->label = __("Number",'fields');
 		$this->defaults = array(
 			'default_value'	=> '',
 			'min'			=> '',
@@ -124,8 +124,8 @@ class acf_field_number extends acf_field {
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Default Value','acf'),
-			'instructions'	=> __('Appears when creating a new post','acf'),
+			'label'			=> __('Default Value','fields'),
+			'instructions'	=> __('Appears when creating a new post','fields'),
 			'type'			=> 'text',
 			'name'			=> 'default_value',
 		));
@@ -133,8 +133,8 @@ class acf_field_number extends acf_field {
 		
 		// placeholder
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Placeholder Text','acf'),
-			'instructions'	=> __('Appears within the input','acf'),
+			'label'			=> __('Placeholder Text','fields'),
+			'instructions'	=> __('Appears within the input','fields'),
 			'type'			=> 'text',
 			'name'			=> 'placeholder',
 		));
@@ -142,8 +142,8 @@ class acf_field_number extends acf_field {
 		
 		// prepend
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Prepend','acf'),
-			'instructions'	=> __('Appears before the input','acf'),
+			'label'			=> __('Prepend','fields'),
+			'instructions'	=> __('Appears before the input','fields'),
 			'type'			=> 'text',
 			'name'			=> 'prepend',
 		));
@@ -151,8 +151,8 @@ class acf_field_number extends acf_field {
 		
 		// append
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Append','acf'),
-			'instructions'	=> __('Appears after the input','acf'),
+			'label'			=> __('Append','fields'),
+			'instructions'	=> __('Appears after the input','fields'),
 			'type'			=> 'text',
 			'name'			=> 'append',
 		));
@@ -160,7 +160,7 @@ class acf_field_number extends acf_field {
 		
 		// min
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Minimum Value','acf'),
+			'label'			=> __('Minimum Value','fields'),
 			'instructions'	=> '',
 			'type'			=> 'number',
 			'name'			=> 'min',
@@ -169,7 +169,7 @@ class acf_field_number extends acf_field {
 		
 		// max
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Maximum Value','acf'),
+			'label'			=> __('Maximum Value','fields'),
 			'instructions'	=> '',
 			'type'			=> 'number',
 			'name'			=> 'max',
@@ -178,7 +178,7 @@ class acf_field_number extends acf_field {
 		
 		// max
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Step Size','acf'),
+			'label'			=> __('Step Size','fields'),
 			'instructions'	=> '',
 			'type'			=> 'number',
 			'name'			=> 'step',
@@ -216,7 +216,7 @@ class acf_field_number extends acf_field {
 			// allow blank to be saved
 			if( !empty($value) ) {
 				
-				$valid = __('Value must be a number', 'acf');
+				$valid = __('Value must be a number', 'fields');
 				
 			}
 			
@@ -234,7 +234,7 @@ class acf_field_number extends acf_field {
 		// min
 		if( is_numeric($field['min']) && $value < floatval($field['min'])) {
 			
-			$valid = sprintf(__('Value must be equal to or higher than %d', 'acf'), $field['min'] );
+			$valid = sprintf(__('Value must be equal to or higher than %d', 'fields'), $field['min'] );
 			
 		}
 		
@@ -242,7 +242,7 @@ class acf_field_number extends acf_field {
 		// max
 		if( is_numeric($field['max']) && $value > floatval($field['max']) ) {
 			
-			$valid = sprintf(__('Value must be equal to or lower than %d', 'acf'), $field['max'] );
+			$valid = sprintf(__('Value must be equal to or lower than %d', 'fields'), $field['max'] );
 			
 		}
 		

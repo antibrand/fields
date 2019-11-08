@@ -122,7 +122,7 @@ function acf_get_field_group_post( $id = 0 ) {
 		
 		// Try cache.
 		$cache_key = acf_cache_key( "acf_get_field_group_post:key:$id" );
-		$post_id = wp_cache_get( $cache_key, 'acf' );
+		$post_id = wp_cache_get( $cache_key, 'fields' );
 		if( $post_id === false ) {
 			
 			// Query posts.
@@ -143,7 +143,7 @@ function acf_get_field_group_post( $id = 0 ) {
 			$post_id = $posts ? $posts[0]->ID : 0;
 			
 			// Update cache.
-			wp_cache_set( $cache_key, $post_id, 'acf' );
+			wp_cache_set( $cache_key, $post_id, 'fields' );
 		}
 		
 		// Check $post_id and return the post when possible.
@@ -356,7 +356,7 @@ function acf_get_raw_field_groups() {
 	
 	// Try cache.
 	$cache_key = acf_cache_key( "acf_get_field_group_posts" );
-	$post_ids = wp_cache_get( $cache_key, 'acf' );
+	$post_ids = wp_cache_get( $cache_key, 'fields' );
 	if( $post_ids === false ) {
 		
 		// Query posts.
@@ -379,7 +379,7 @@ function acf_get_raw_field_groups() {
 		}
 		
 		// Update cache.
-		wp_cache_set( $cache_key, $post_ids, 'acf' );
+		wp_cache_set( $cache_key, $post_ids, 'fields' );
 	}
 	
 	// Loop over ids and populate array of field groups.
@@ -600,10 +600,10 @@ function acf_flush_field_group_cache( $field_group ) {
 	acf_get_store( 'field-groups' )->remove( $field_group['key'] );
 	
 	// Flush cached post_id for this field group's key.
-	wp_cache_delete( acf_cache_key( "acf_get_field_group_post:key:{$field_group['key']}" ), 'acf' );
+	wp_cache_delete( acf_cache_key( "acf_get_field_group_post:key:{$field_group['key']}" ), 'fields' );
 	
 	// Flush cached array of post_ids for collection of field groups.
-	wp_cache_delete( acf_cache_key( "acf_get_field_group_posts" ), 'acf' );
+	wp_cache_delete( acf_cache_key( "acf_get_field_group_posts" ), 'fields' );
 }
 
 /**
@@ -816,7 +816,7 @@ function acf_duplicate_field_group( $id = 0, $new_post_id = 0 ){
 	
 	// Add (copy) to title when apropriate.
 	if( !$new_post_id ) {
-		$field_group['title'] .= ' (' . __("copy", 'acf') . ')';
+		$field_group['title'] .= ' (' . __("copy", 'fields') . ')';
 	}
 	
 	// When importing a new field group, insert a temporary post and set the field group's ID.

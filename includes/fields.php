@@ -305,7 +305,7 @@ function acf_get_field_type_prop( $name = '', $prop = '' ) {
 
 function acf_get_field_type_label( $name = '' ) {
 	$label = acf_get_field_type_prop( $name, 'label' );
-	return $label ? $label : '<span class="acf-tooltip-js" title="'.__('Field type does not exist', 'acf').'">'.__('Unknown', 'acf').'</span>';
+	return $label ? $label : '<span class="acf-tooltip-js" title="'.__('Field type does not exist', 'fields').'">'.__('Unknown', 'fields').'</span>';
 }
 
 
@@ -346,12 +346,12 @@ function acf_get_grouped_field_types() {
 	$types = acf_get_field_types();
 	$groups = array();
 	$l10n = array(
-		'basic'			=> __('Basic', 'acf'),
-		'content'		=> __('Content', 'acf'),
-		'choice'		=> __('Choice', 'acf'),
-		'relational'	=> __('Relational', 'acf'),
-		'jquery'		=> __('jQuery', 'acf'),
-		'layout'		=> __('Layout', 'acf'),
+		'basic'			=> __('Basic', 'fields'),
+		'content'		=> __('Content', 'fields'),
+		'choice'		=> __('Choice', 'fields'),
+		'relational'	=> __('Relational', 'fields'),
+		'jquery'		=> __('jQuery', 'fields'),
+		'layout'		=> __('Layout', 'fields'),
 	);
 	
 	

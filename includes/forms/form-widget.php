@@ -112,7 +112,7 @@ class acf_form_widget {
 		
 		
 		// validate
-		acf_validate_values( $_POST[ $id ][ $number ]['acf'], $prefix );
+		acf_validate_values( $_POST[ $id ][ $number ]['fields'], $prefix );
 				
 	}
 	
@@ -229,11 +229,11 @@ class acf_form_widget {
 	function save_widget( $instance, $new_instance, $old_instance, $widget ) {
 		
 		// bail ealry if not valid (!customize + acf values + nonce)
-		if( isset($_POST['wp_customize']) || !isset($new_instance['acf']) || !acf_verify_nonce('widget') ) return $instance;
+		if( isset($_POST['wp_customize']) || !isset($new_instance['fields']) || !acf_verify_nonce('widget') ) return $instance;
 		
 		
 		// save
-		acf_save_post( "widget_{$widget->id}", $new_instance['acf'] );
+		acf_save_post( "widget_{$widget->id}", $new_instance['fields'] );
 		
 		
 		// return

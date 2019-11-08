@@ -22,7 +22,7 @@ class acf_field__group extends acf_field {
 		
 		// vars
 		$this->name = 'group';
-		$this->label = __("Group",'acf');
+		$this->label = __("Group",'fields');
 		$this->category = 'layout';
 		$this->defaults = array(
 			'sub_fields'	=> array(),
@@ -456,7 +456,7 @@ class acf_field__group extends acf_field {
 		
 		?><tr class="acf-field acf-field-setting-sub_fields" data-setting="group" data-name="sub_fields">
 			<td class="acf-label">
-				<label><?php _e("Sub Fields",'acf'); ?></label>	
+				<label><?php _e("Sub Fields",'fields'); ?></label>	
 			</td>
 			<td class="acf-input">
 				<?php 
@@ -471,15 +471,15 @@ class acf_field__group extends acf_field {
 			
 		// layout
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Layout','acf'),
-			'instructions'	=> __('Specify the style used to render the selected fields', 'acf'),
+			'label'			=> __('Layout','fields'),
+			'instructions'	=> __('Specify the style used to render the selected fields', 'fields'),
 			'type'			=> 'radio',
 			'name'			=> 'layout',
 			'layout'		=> 'horizontal',
 			'choices'		=> array(
-				'block'			=> __('Block','acf'),
-				'table'			=> __('Table','acf'),
-				'row'			=> __('Row','acf')
+				'block'			=> __('Block','fields'),
+				'table'			=> __('Table','fields'),
+				'row'			=> __('Row','fields')
 			)
 		));
 		

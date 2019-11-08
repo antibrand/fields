@@ -22,7 +22,7 @@ class acf_field_relationship extends acf_field {
 		
 		// vars
 		$this->name = 'relationship';
-		$this->label = __("Relationship",'acf');
+		$this->label = __("Relationship",'fields');
 		$this->category = 'relational';
 		$this->defaults = array(
 			'post_type'			=> array(),
@@ -58,10 +58,10 @@ class acf_field_relationship extends acf_field {
 		
 		// localize
 		acf_localize_text(array(
-			//'Minimum values reached ( {min} values )'	=> __('Minimum values reached ( {min} values )', 'acf'),
-			'Maximum values reached ( {max} values )'	=> __('Maximum values reached ( {max} values )', 'acf'),
-			'Loading'									=> __('Loading', 'acf'),
-			'No matches found'							=> __('No matches found', 'acf'),
+			//'Minimum values reached ( {min} values )'	=> __('Minimum values reached ( {min} values )', 'fields'),
+			'Maximum values reached ( {max} values )'	=> __('Maximum values reached ( {max} values )', 'fields'),
+			'Loading'									=> __('Loading', 'fields'),
+			'No matches found'							=> __('No matches found', 'fields'),
 	   	));
 	}
 	
@@ -408,7 +408,7 @@ class acf_field_relationship extends acf_field {
 		if( in_array('post_type', $filters) ) {
 			
 			$filter_post_type_choices = array(
-				''	=> __('Select post type', 'acf')
+				''	=> __('Select post type', 'fields')
 			) + acf_get_pretty_post_types( $post_type );
 		}
 		
@@ -417,7 +417,7 @@ class acf_field_relationship extends acf_field {
 			
 			$term_choices = array();
 			$filter_taxonomy_choices = array(
-				''	=> __('Select taxonomy', 'acf')
+				''	=> __('Select taxonomy', 'fields')
 			);
 			
 			// check for specific taxonomy setting
@@ -474,7 +474,7 @@ class acf_field_relationship extends acf_field {
 		if( in_array('search', $filters) ): ?>
 		<div class="filter -search">
 			<span>
-				<?php acf_text_input( array('placeholder' => __("Search...",'acf'), 'data-filter' => 's') ); ?>
+				<?php acf_text_input( array('placeholder' => __("Search...",'fields'), 'data-filter' => 's') ); ?>
 			</span>
 		</div>
 		<?php endif; 
@@ -557,7 +557,7 @@ class acf_field_relationship extends acf_field {
 		
 		// post_type
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Filter by Post Type','acf'),
+			'label'			=> __('Filter by Post Type','fields'),
 			'instructions'	=> '',
 			'type'			=> 'select',
 			'name'			=> 'post_type',
@@ -565,13 +565,13 @@ class acf_field_relationship extends acf_field {
 			'multiple'		=> 1,
 			'ui'			=> 1,
 			'allow_null'	=> 1,
-			'placeholder'	=> __("All post types",'acf'),
+			'placeholder'	=> __("All post types",'fields'),
 		));
 		
 		
 		// taxonomy
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Filter by Taxonomy','acf'),
+			'label'			=> __('Filter by Taxonomy','fields'),
 			'instructions'	=> '',
 			'type'			=> 'select',
 			'name'			=> 'taxonomy',
@@ -579,39 +579,39 @@ class acf_field_relationship extends acf_field {
 			'multiple'		=> 1,
 			'ui'			=> 1,
 			'allow_null'	=> 1,
-			'placeholder'	=> __("All taxonomies",'acf'),
+			'placeholder'	=> __("All taxonomies",'fields'),
 		));
 		
 		
 		// filters
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Filters','acf'),
+			'label'			=> __('Filters','fields'),
 			'instructions'	=> '',
 			'type'			=> 'checkbox',
 			'name'			=> 'filters',
 			'choices'		=> array(
-				'search'		=> __("Search",'acf'),
-				'post_type'		=> __("Post Type",'acf'),
-				'taxonomy'		=> __("Taxonomy",'acf'),
+				'search'		=> __("Search",'fields'),
+				'post_type'		=> __("Post Type",'fields'),
+				'taxonomy'		=> __("Taxonomy",'fields'),
 			),
 		));
 		
 		
 		// filters
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Elements','acf'),
-			'instructions'	=> __('Selected elements will be displayed in each result','acf'),
+			'label'			=> __('Elements','fields'),
+			'instructions'	=> __('Selected elements will be displayed in each result','fields'),
 			'type'			=> 'checkbox',
 			'name'			=> 'elements',
 			'choices'		=> array(
-				'featured_image'	=> __("Featured Image",'acf'),
+				'featured_image'	=> __("Featured Image",'fields'),
 			),
 		));
 		
 		
 		// min
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Minimum posts','acf'),
+			'label'			=> __('Minimum posts','fields'),
 			'instructions'	=> '',
 			'type'			=> 'number',
 			'name'			=> 'min',
@@ -620,7 +620,7 @@ class acf_field_relationship extends acf_field {
 		
 		// max
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Maximum posts','acf'),
+			'label'			=> __('Maximum posts','fields'),
 			'instructions'	=> '',
 			'type'			=> 'number',
 			'name'			=> 'max',
@@ -631,13 +631,13 @@ class acf_field_relationship extends acf_field {
 		
 		// return_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Return Format','acf'),
+			'label'			=> __('Return Format','fields'),
 			'instructions'	=> '',
 			'type'			=> 'radio',
 			'name'			=> 'return_format',
 			'choices'		=> array(
-				'object'		=> __("Post Object",'acf'),
-				'id'			=> __("Post ID",'acf'),
+				'object'		=> __("Post Object",'fields'),
+				'id'			=> __("Post ID",'fields'),
 			),
 			'layout'	=>	'horizontal',
 		));
@@ -724,7 +724,7 @@ class acf_field_relationship extends acf_field {
 		// min
 		if( count($value) < $field['min'] ) {
 		
-			$valid = _n( '%s requires at least %s selection', '%s requires at least %s selections', $field['min'], 'acf' );
+			$valid = _n( '%s requires at least %s selection', '%s requires at least %s selections', $field['min'], 'fields' );
 			$valid = sprintf( $valid, $field['label'], $field['min'] );
 			
 		}

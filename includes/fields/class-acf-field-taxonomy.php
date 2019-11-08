@@ -25,7 +25,7 @@ class acf_field_taxonomy extends acf_field {
 		
 		// vars
 		$this->name = 'taxonomy';
-		$this->label = __("Taxonomy",'acf');
+		$this->label = __("Taxonomy",'fields');
 		$this->category = 'relational';
 		$this->defaults = array(
 			'taxonomy' 			=> 'category',
@@ -711,7 +711,7 @@ class acf_field_taxonomy extends acf_field {
 		// vars
 		$args = array(
 			'taxonomy'     		=> $field['taxonomy'],
-			'show_option_none'	=> sprintf( _x('No %s', 'No terms', 'acf'), strtolower($taxonomy_obj->labels->name) ),
+			'show_option_none'	=> sprintf( _x('No %s', 'No terms', 'fields'), strtolower($taxonomy_obj->labels->name) ),
 			'hide_empty'   		=> false,
 			'style'        		=> 'none',
 			'walker'       		=> new ACF_Taxonomy_Field_Walker( $field ),
@@ -751,8 +751,8 @@ class acf_field_taxonomy extends acf_field {
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Taxonomy','acf'),
-			'instructions'	=> __('Select the taxonomy to be displayed','acf'),
+			'label'			=> __('Taxonomy','fields'),
+			'instructions'	=> __('Select the taxonomy to be displayed','fields'),
 			'type'			=> 'select',
 			'name'			=> 'taxonomy',
 			'choices'		=> acf_get_taxonomy_labels(),
@@ -761,19 +761,19 @@ class acf_field_taxonomy extends acf_field {
 		
 		// field_type
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Appearance','acf'),
-			'instructions'	=> __('Select the appearance of this field','acf'),
+			'label'			=> __('Appearance','fields'),
+			'instructions'	=> __('Select the appearance of this field','fields'),
 			'type'			=> 'select',
 			'name'			=> 'field_type',
 			'optgroup'		=> true,
 			'choices'		=> array(
-				__("Multiple Values",'acf') => array(
-					'checkbox' => __('Checkbox', 'acf'),
-					'multi_select' => __('Multi Select', 'acf')
+				__("Multiple Values",'fields') => array(
+					'checkbox' => __('Checkbox', 'fields'),
+					'multi_select' => __('Multi Select', 'fields')
 				),
-				__("Single Value",'acf') => array(
-					'radio' => __('Radio Buttons', 'acf'),
-					'select' => _x('Select', 'noun', 'acf')
+				__("Single Value",'fields') => array(
+					'radio' => __('Radio Buttons', 'fields'),
+					'select' => _x('Select', 'noun', 'fields')
 				)
 			)
 		));
@@ -781,7 +781,7 @@ class acf_field_taxonomy extends acf_field {
 		
 		// allow_null
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Allow Null?','acf'),
+			'label'			=> __('Allow Null?','fields'),
 			'instructions'	=> '',
 			'name'			=> 'allow_null',
 			'type'			=> 'true_false',
@@ -796,8 +796,8 @@ class acf_field_taxonomy extends acf_field {
 		
 		// add_term
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Create Terms','acf'),
-			'instructions'	=> __('Allow new terms to be created whilst editing','acf'),
+			'label'			=> __('Create Terms','fields'),
+			'instructions'	=> __('Allow new terms to be created whilst editing','fields'),
 			'name'			=> 'add_term',
 			'type'			=> 'true_false',
 			'ui'			=> 1,
@@ -806,8 +806,8 @@ class acf_field_taxonomy extends acf_field {
 		
 		// save_terms
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Save Terms','acf'),
-			'instructions'	=> __('Connect selected terms to the post','acf'),
+			'label'			=> __('Save Terms','fields'),
+			'instructions'	=> __('Connect selected terms to the post','fields'),
 			'name'			=> 'save_terms',
 			'type'			=> 'true_false',
 			'ui'			=> 1,
@@ -816,8 +816,8 @@ class acf_field_taxonomy extends acf_field {
 		
 		// load_terms
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Load Terms','acf'),
-			'instructions'	=> __('Load value from posts terms','acf'),
+			'label'			=> __('Load Terms','fields'),
+			'instructions'	=> __('Load value from posts terms','fields'),
 			'name'			=> 'load_terms',
 			'type'			=> 'true_false',
 			'ui'			=> 1,
@@ -826,13 +826,13 @@ class acf_field_taxonomy extends acf_field {
 		
 		// return_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Return Value','acf'),
+			'label'			=> __('Return Value','fields'),
 			'instructions'	=> '',
 			'type'			=> 'radio',
 			'name'			=> 'return_format',
 			'choices'		=> array(
-				'object'		=>	__("Term Object",'acf'),
-				'id'			=>	__("Term ID",'acf')
+				'object'		=>	__("Term Object",'fields'),
+				'id'			=>	__("Term ID",'fields')
 			),
 			'layout'	=>	'horizontal',
 		));
@@ -882,7 +882,7 @@ class acf_field_taxonomy extends acf_field {
 		// note: this situation should never occur due to condition of the add new button
 		if( !current_user_can( $taxonomy_obj->cap->manage_terms) ) {
 			wp_send_json_error(array(
-				'error'	=> sprintf( __('User unable to add new %s', 'acf'), $taxonomy_label )
+				'error'	=> sprintf( __('User unable to add new %s', 'fields'), $taxonomy_label )
 			));
 		}
 		
@@ -892,7 +892,7 @@ class acf_field_taxonomy extends acf_field {
 			// exists
 			if( term_exists($args['term_name'], $field['taxonomy'], $args['term_parent']) ) {
 				wp_send_json_error(array(
-					'error'	=> sprintf( __('%s already exists', 'acf'), $taxonomy_label )
+					'error'	=> sprintf( __('%s already exists', 'fields'), $taxonomy_label )
 				));
 			}
 			
@@ -924,7 +924,7 @@ class acf_field_taxonomy extends acf_field {
 		
 			// success
 			wp_send_json_success(array(
-				'message'		=> sprintf( __('%s added', 'acf'), $taxonomy_label ),
+				'message'		=> sprintf( __('%s added', 'fields'), $taxonomy_label ),
 				'term_id'		=> $term->term_id,
 				'term_name'		=> $term->name,
 				'term_label'	=> $prefix . $term->name,
@@ -936,7 +936,7 @@ class acf_field_taxonomy extends acf_field {
 		?><form method="post"><?php
 		
 		acf_render_field_wrap(array(
-			'label'			=> __('Name', 'acf'),
+			'label'			=> __('Name', 'fields'),
 			'name'			=> 'term_name',
 			'type'			=> 'text'
 		));
@@ -958,7 +958,7 @@ class acf_field_taxonomy extends acf_field {
 			}
 			
 			acf_render_field_wrap(array(
-				'label'			=> __('Parent', 'acf'),
+				'label'			=> __('Parent', 'fields'),
 				'name'			=> 'term_parent',
 				'type'			=> 'select',
 				'allow_null'	=> 1,
@@ -970,7 +970,7 @@ class acf_field_taxonomy extends acf_field {
 		
 		
 		?><p class="acf-submit">
-			<button class="acf-submit-button button button-primary" type="submit"><?php _e("Add", 'acf'); ?></button>
+			<button class="acf-submit-button button button-primary" type="submit"><?php _e("Add", 'fields'); ?></button>
 		</p>
 		</form><?php
 		

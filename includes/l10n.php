@@ -103,7 +103,7 @@ function acf_get_locale() {
  * @param	string $locale The plugin's current locale.
  * @return	void
  */
-function acf_load_textdomain( $domain = 'acf' ) {
+function acf_load_textdomain( $domain = 'fields' ) {
 	
 	/**
 	 * Filters a plugin's locale.

@@ -22,7 +22,7 @@ class acf_field_message extends acf_field {
 		
 		// vars
 		$this->name = 'message';
-		$this->label = __("Message",'acf');
+		$this->label = __("Message",'fields');
 		$this->category = 'layout';
 		$this->defaults = array(
 			'message'		=> '',
@@ -98,7 +98,7 @@ class acf_field_message extends acf_field {
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Message','acf'),
+			'label'			=> __('Message','fields'),
 			'instructions'	=> '',
 			'type'			=> 'textarea',
 			'name'			=> 'message',
@@ -107,22 +107,22 @@ class acf_field_message extends acf_field {
 		
 		// formatting
 		acf_render_field_setting( $field, array(
-			'label'			=> __('New Lines','acf'),
-			'instructions'	=> __('Controls how new lines are rendered','acf'),
+			'label'			=> __('New Lines','fields'),
+			'instructions'	=> __('Controls how new lines are rendered','fields'),
 			'type'			=> 'select',
 			'name'			=> 'new_lines',
 			'choices'		=> array(
-				'wpautop'		=> __("Automatically add paragraphs",'acf'),
-				'br'			=> __("Automatically add &lt;br&gt;",'acf'),
-				''				=> __("No Formatting",'acf')
+				'wpautop'		=> __("Automatically add paragraphs",'fields'),
+				'br'			=> __("Automatically add &lt;br&gt;",'fields'),
+				''				=> __("No Formatting",'fields')
 			)
 		));
 		
 		
 		// HTML
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Escape HTML','acf'),
-			'instructions'	=> __('Allow HTML markup to display as visible text instead of rendering','acf'),
+			'label'			=> __('Escape HTML','fields'),
+			'instructions'	=> __('Allow HTML markup to display as visible text instead of rendering','fields'),
 			'name'			=> 'esc_html',
 			'type'			=> 'true_false',
 			'ui'			=> 1,

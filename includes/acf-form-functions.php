@@ -116,11 +116,11 @@ function acf_save_post( $post_id = 0, $values = null ) {
 	
 	// Override $_POST data with $values.
 	if( $values !== null ) {
-		$_POST['acf'] = $values;
+		$_POST['fields'] = $values;
 	}
 	
 	// Bail early if no data to save.
-	if( empty($_POST['acf']) ) {
+	if( empty($_POST['fields']) ) {
 		return false;
 	}
 	
@@ -129,7 +129,7 @@ function acf_save_post( $post_id = 0, $values = null ) {
 	
 	// Filter $_POST data for users without the 'unfiltered_html' capability.
 	if( !acf_allow_unfiltered_html() ) {
-		$_POST['acf'] = wp_kses_post_deep( $_POST['acf'] );
+		$_POST['fields'] = wp_kses_post_deep( $_POST['fields'] );
 	}
 	
 	// Do generic action.
@@ -154,8 +154,8 @@ function acf_save_post( $post_id = 0, $values = null ) {
 function _acf_do_save_post( $post_id = 0 ) {
 	
 	// Check and update $_POST data.
-	if( $_POST['acf'] ) {
-		acf_update_values( $_POST['acf'], $post_id );
+	if( $_POST['fields'] ) {
+		acf_update_values( $_POST['fields'], $post_id );
 	}	
 }
 

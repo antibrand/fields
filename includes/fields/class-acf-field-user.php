@@ -22,7 +22,7 @@ class acf_field_user extends acf_field {
 		
 		// vars
 		$this->name = 'user';
-		$this->label = __("User",'acf');
+		$this->label = __("User",'fields');
 		$this->category = 'relational';
 		$this->defaults = array(
 			'role' 			=> '',
@@ -375,7 +375,7 @@ class acf_field_user extends acf_field {
 	function render_field_settings( $field ) {
 		
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Filter by role','acf'),
+			'label'			=> __('Filter by role','fields'),
 			'instructions'	=> '',
 			'type'			=> 'select',
 			'name'			=> 'role',
@@ -383,14 +383,14 @@ class acf_field_user extends acf_field {
 			'multiple'		=> 1,
 			'ui'			=> 1,
 			'allow_null'	=> 1,
-			'placeholder'	=> __("All user roles",'acf'),
+			'placeholder'	=> __("All user roles",'fields'),
 		));
 		
 		
 		
 		// allow_null
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Allow Null?','acf'),
+			'label'			=> __('Allow Null?','fields'),
 			'instructions'	=> '',
 			'name'			=> 'allow_null',
 			'type'			=> 'true_false',
@@ -400,7 +400,7 @@ class acf_field_user extends acf_field {
 		
 		// multiple
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Select multiple values?','acf'),
+			'label'			=> __('Select multiple values?','fields'),
 			'instructions'	=> '',
 			'name'			=> 'multiple',
 			'type'			=> 'true_false',
@@ -409,14 +409,14 @@ class acf_field_user extends acf_field {
 		
 		// return_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Return Format','acf'),
+			'label'			=> __('Return Format','fields'),
 			'instructions'	=> '',
 			'type'			=> 'radio',
 			'name'			=> 'return_format',
 			'choices'		=> array(
-				'array'			=> __("User Array",'acf'),
-				'object'		=> __("User Object",'acf'),
-				'id'			=> __("User ID",'acf'),
+				'array'			=> __("User Array",'fields'),
+				'object'		=> __("User Object",'fields'),
+				'id'			=> __("User ID",'fields'),
 			),
 			'layout'	=>	'horizontal',
 		));

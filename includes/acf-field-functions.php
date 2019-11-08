@@ -45,7 +45,7 @@ function acf_get_field( $id = 0 ) {
 	$field = acf_validate_field( $field );
 	
 	// Set input prefix.
-	$field['prefix'] = 'acf';
+	$field['prefix'] = 'fields';
 	
 	/**
 	 * Filters the $field array after it has been loaded.
@@ -132,7 +132,7 @@ function acf_get_field_post( $id = 0 ) {
 		
 		// Try cache.
 		$cache_key = acf_cache_key( "acf_get_field_post:$type:$id" );
-		$post_id = wp_cache_get( $cache_key, 'acf' );
+		$post_id = wp_cache_get( $cache_key, 'fields' );
 		if( $post_id === false ) {
 			
 			// Query posts.
@@ -152,7 +152,7 @@ function acf_get_field_post( $id = 0 ) {
 			$post_id = $posts ? $posts[0]->ID : 0;
 			
 			// Update cache.
-			wp_cache_set( $cache_key, $post_id, 'acf' );
+			wp_cache_set( $cache_key, $post_id, 'fields' );
 		}
 		
 		// Check $post_id and return the post when possible.
@@ -393,7 +393,7 @@ function acf_get_raw_fields( $id = 0 ) {
 	
 	// Try cache.
 	$cache_key = acf_cache_key( "acf_get_field_posts:$id" );
-	$post_ids = wp_cache_get( $cache_key, 'acf' );
+	$post_ids = wp_cache_get( $cache_key, 'fields' );
 	if( $post_ids === false ) {
 		
 		// Query posts.
@@ -417,7 +417,7 @@ function acf_get_raw_fields( $id = 0 ) {
 		}
 		
 		// Update cache.
-		wp_cache_set( $cache_key, $post_ids, 'acf' );
+		wp_cache_set( $cache_key, $post_ids, 'fields' );
 	}
 	
 	// Loop over ids and populate array of fields.
@@ -828,7 +828,7 @@ function acf_get_field_label( $field, $context = '' ) {
 	
 	// Display empty text when editing field.
 	if( $context == 'admin' && $label === '' ) {
-		$label = __('(no label)', 'acf');
+		$label = __('(no label)', 'fields');
 	}
 	
 	// Add required HTML.
@@ -1073,11 +1073,11 @@ function acf_flush_field_cache( $field ) {
 	acf_get_store( 'fields' )->remove( $field['key'] );
 	
 	// Flush cached post_id for this field's name and key.
-	wp_cache_delete( acf_cache_key("acf_get_field_post:name:{$field['name']}"), 'acf' );
-	wp_cache_delete( acf_cache_key("acf_get_field_post:key:{$field['key']}"), 'acf' );
+	wp_cache_delete( acf_cache_key("acf_get_field_post:name:{$field['name']}"), 'fields' );
+	wp_cache_delete( acf_cache_key("acf_get_field_post:key:{$field['key']}"), 'fields' );
 	
 	// Flush cached array of post_ids for this field's parent.
-	wp_cache_delete( acf_cache_key("acf_get_field_posts:{$field['parent']}"), 'acf' );
+	wp_cache_delete( acf_cache_key("acf_get_field_posts:{$field['parent']}"), 'fields' );
 }
 
 /**
@@ -1215,12 +1215,12 @@ function acf_untrash_field( $id = 0 ) {
  * @param	string $prefix The new prefix.
  * @return	void
  */
-function acf_prefix_fields( &$fields, $prefix = 'acf' ) {
+function acf_prefix_fields( &$fields, $prefix = 'fields' ) {
 	
 	// Loopover fields.
 	foreach( $fields as &$field ) {
 		
-		// Replace 'acf' with $prefix.
+		// Replace 'fields' with $prefix.
 		$field['prefix'] = $prefix . substr($field['prefix'], 3);
 	}
 }

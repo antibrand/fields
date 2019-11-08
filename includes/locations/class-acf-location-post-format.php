@@ -24,7 +24,7 @@ class acf_location_post_format extends acf_location {
 		
 		// vars
 		$this->name = 'post_format';
-		$this->label = __("Post Format",'acf');
+		$this->label = __("Post Format",'fields');
 		$this->category = 'post';
     	
 	}

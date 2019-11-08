@@ -22,7 +22,7 @@ class acf_field_wysiwyg extends acf_field {
 		
 		// vars
 		$this->name = 'wysiwyg';
-		$this->label = __("Wysiwyg Editor",'acf');
+		$this->label = __("Wysiwyg Editor",'fields');
 		$this->category = 'content';
 		$this->defaults = array(
 			'tabs'			=> 'all',
@@ -327,14 +327,14 @@ class acf_field_wysiwyg extends acf_field {
 				<?php endif; ?>
 				<?php if( user_can_richedit() && $show_tabs ): ?>
 					<div class="wp-editor-tabs">
-						<button id="<?php echo $id; ?>-tmce" class="wp-switch-editor switch-tmce" <?php echo $button; ?> type="button"><?php echo __('Visual', 'acf'); ?></button>
-						<button id="<?php echo $id; ?>-html" class="wp-switch-editor switch-html" <?php echo $button; ?> type="button"><?php echo _x( 'Text', 'Name for the Text editor tab (formerly HTML)', 'acf' ); ?></button>
+						<button id="<?php echo $id; ?>-tmce" class="wp-switch-editor switch-tmce" <?php echo $button; ?> type="button"><?php echo __('Visual', 'fields'); ?></button>
+						<button id="<?php echo $id; ?>-html" class="wp-switch-editor switch-html" <?php echo $button; ?> type="button"><?php echo _x( 'Text', 'Name for the Text editor tab (formerly HTML)', 'fields' ); ?></button>
 					</div>
 				<?php endif; ?>
 			</div>
 			<div id="wp-<?php echo $id; ?>-editor-container" class="wp-editor-container">
 				<?php if( $field['delay'] ): ?>
-					<div class="acf-editor-toolbar"><?php _e('Click to initialize TinyMCE', 'acf'); ?></div>
+					<div class="acf-editor-toolbar"><?php _e('Click to initialize TinyMCE', 'fields'); ?></div>
 				<?php endif; ?>
 				<?php printf( $textarea, $field['value'] ); ?>
 			</div>
@@ -378,8 +378,8 @@ class acf_field_wysiwyg extends acf_field {
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Default Value','acf'),
-			'instructions'	=> __('Appears when creating a new post','acf'),
+			'label'			=> __('Default Value','fields'),
+			'instructions'	=> __('Appears when creating a new post','fields'),
 			'type'			=> 'textarea',
 			'name'			=> 'default_value',
 		));
@@ -387,21 +387,21 @@ class acf_field_wysiwyg extends acf_field {
 		
 		// tabs
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Tabs','acf'),
+			'label'			=> __('Tabs','fields'),
 			'instructions'	=> '',
 			'type'			=> 'select',
 			'name'			=> 'tabs',
 			'choices'		=> array(
-				'all'			=>	__("Visual & Text",'acf'),
-				'visual'		=>	__("Visual Only",'acf'),
-				'text'			=>	__("Text Only",'acf'),
+				'all'			=>	__("Visual & Text",'fields'),
+				'visual'		=>	__("Visual Only",'fields'),
+				'text'			=>	__("Text Only",'fields'),
 			)
 		));
 		
 		
 		// toolbar
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Toolbar','acf'),
+			'label'			=> __('Toolbar','fields'),
 			'instructions'	=> '',
 			'type'			=> 'select',
 			'name'			=> 'toolbar',
@@ -416,7 +416,7 @@ class acf_field_wysiwyg extends acf_field {
 		
 		// media_upload
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Show Media Upload Buttons?','acf'),
+			'label'			=> __('Show Media Upload Buttons?','fields'),
 			'instructions'	=> '',
 			'name'			=> 'media_upload',
 			'type'			=> 'true_false',
@@ -426,8 +426,8 @@ class acf_field_wysiwyg extends acf_field {
 		
 		// delay
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Delay initialization?','acf'),
-			'instructions'	=> __('TinyMCE will not be initialized until field is clicked','acf'),
+			'label'			=> __('Delay initialization?','fields'),
+			'instructions'	=> __('TinyMCE will not be initialized until field is clicked','fields'),
 			'name'			=> 'delay',
 			'type'			=> 'true_false',
 			'ui'			=> 1,

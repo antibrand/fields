@@ -189,7 +189,7 @@ class ACF_Form_User {
 	function render( $args = array() ) {
 		
 		// Allow $_POST data to persist across form submission attempts.
-		if( isset($_POST['acf']) ) {
+		if( isset($_POST['fields']) ) {
 			add_filter('acf/pre_load_value', array($this, 'filter_pre_load_value'), 10, 3);
 		}
 		
@@ -333,7 +333,7 @@ class ACF_Form_User {
 			foreach( $acf_errors as $acf_error ) {
 				$errors->add(
 					acf_idify( $acf_error['input'] ), 
-					acf_punctify( sprintf( __('<strong>ERROR</strong>: %s', 'acf'), $acf_error['message'] ) )
+					acf_punctify( sprintf( __('<strong>ERROR</strong>: %s', 'fields'), $acf_error['message'] ) )
 				);
 			}
 		}
@@ -355,8 +355,8 @@ class ACF_Form_User {
 	 */
 	function filter_pre_load_value( $null, $post_id, $field ) {
 		$field_key = $field['key'];
-		if( isset( $_POST['acf'][ $field_key ] )) {
-			return $_POST['acf'][ $field_key ];
+		if( isset( $_POST['fields'][ $field_key ] )) {
+			return $_POST['fields'][ $field_key ];
 		}
 		return $null;
 	}

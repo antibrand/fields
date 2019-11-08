@@ -22,7 +22,7 @@ class acf_field_tab extends acf_field {
 		
 		// vars
 		$this->name = 'tab';
-		$this->label = __("Tab",'acf');
+		$this->label = __("Tab",'fields');
 		$this->category = 'layout';
 		$this->defaults = array(
 			'placement'	=> 'top',
@@ -82,13 +82,13 @@ class acf_field_tab extends acf_field {
 /*
 		// message
 		$message = '';
-		$message .= '<p>' . __( 'Use "Tab Fields" to better organize your edit screen by grouping fields together.', 'acf') . '</p>';
-		$message .= '<p>' . __( 'All fields following this "tab field" (or until another "tab field" is defined) will be grouped together using this field\'s label as the tab heading.','acf') . '</p>';
+		$message .= '<p>' . __( 'Use "Tab Fields" to better organize your edit screen by grouping fields together.', 'fields') . '</p>';
+		$message .= '<p>' . __( 'All fields following this "tab field" (or until another "tab field" is defined) will be grouped together using this field\'s label as the tab heading.','fields') . '</p>';
 		
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Instructions','acf'),
+			'label'			=> __('Instructions','fields'),
 			'instructions'	=> '',
 			'name'			=> 'notes',
 			'type'			=> 'message',
@@ -99,20 +99,20 @@ class acf_field_tab extends acf_field {
 		
 		// preview_size
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Placement','acf'),
+			'label'			=> __('Placement','fields'),
 			'type'			=> 'select',
 			'name'			=> 'placement',
 			'choices' 		=> array(
-				'top'			=>	__("Top aligned", 'acf'),
-				'left'			=>	__("Left aligned", 'acf'),
+				'top'			=>	__("Top aligned", 'fields'),
+				'left'			=>	__("Left aligned", 'fields'),
 			)
 		));
 		
 		
 		// endpoint
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Endpoint','acf'),
-			'instructions'	=> __('Define an endpoint for the previous tabs to stop. This will start a new group of tabs.', 'acf'),
+			'label'			=> __('Endpoint','fields'),
+			'instructions'	=> __('Define an endpoint for the previous tabs to stop. This will start a new group of tabs.', 'fields'),
 			'name'			=> 'endpoint',
 			'type'			=> 'true_false',
 			'ui'			=> 1,

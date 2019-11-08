@@ -22,7 +22,7 @@ class acf_field_google_map extends acf_field {
 		
 		// vars
 		$this->name = 'google_map';
-		$this->label = __("Google Map",'acf');
+		$this->label = __("Google Map",'fields');
 		$this->category = 'jquery';
 		$this->defaults = array(
 			'height'		=> '',
@@ -56,7 +56,7 @@ class acf_field_google_map extends acf_field {
 		
 		// localize
 		acf_localize_text(array(
-			'Sorry, this browser does not support geolocation'	=> __('Sorry, this browser does not support geolocation', 'acf'),
+			'Sorry, this browser does not support geolocation'	=> __('Sorry, this browser does not support geolocation', 'fields'),
 	   	));
 	   	
 	   	
@@ -143,12 +143,12 @@ class acf_field_google_map extends acf_field {
 	<div class="title">
 		
 		<div class="acf-actions -hover">
-			<a href="#" data-name="search" class="acf-icon -search grey" title="<?php _e("Search", 'acf'); ?>"></a><?php 
-			?><a href="#" data-name="clear" class="acf-icon -cancel grey" title="<?php _e("Clear location", 'acf'); ?>"></a><?php 
-			?><a href="#" data-name="locate" class="acf-icon -location grey" title="<?php _e("Find current location", 'acf'); ?>"></a>
+			<a href="#" data-name="search" class="acf-icon -search grey" title="<?php _e("Search", 'fields'); ?>"></a><?php 
+			?><a href="#" data-name="clear" class="acf-icon -cancel grey" title="<?php _e("Clear location", 'fields'); ?>"></a><?php 
+			?><a href="#" data-name="locate" class="acf-icon -location grey" title="<?php _e("Find current location", 'fields'); ?>"></a>
 		</div>
 		
-		<input class="search" type="text" placeholder="<?php _e("Search for address...",'acf'); ?>" value="<?php echo esc_attr( $search ); ?>" />
+		<input class="search" type="text" placeholder="<?php _e("Search for address...",'fields'); ?>" value="<?php echo esc_attr( $search ); ?>" />
 		<i class="acf-loading"></i>
 				
 	</div>
@@ -178,8 +178,8 @@ class acf_field_google_map extends acf_field {
 		
 		// center_lat
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Center','acf'),
-			'instructions'	=> __('Center the initial map','acf'),
+			'label'			=> __('Center','fields'),
+			'instructions'	=> __('Center the initial map','fields'),
 			'type'			=> 'text',
 			'name'			=> 'center_lat',
 			'prepend'		=> 'lat',
@@ -189,8 +189,8 @@ class acf_field_google_map extends acf_field {
 		
 		// center_lng
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Center','acf'),
-			'instructions'	=> __('Center the initial map','acf'),
+			'label'			=> __('Center','fields'),
+			'instructions'	=> __('Center the initial map','fields'),
 			'type'			=> 'text',
 			'name'			=> 'center_lng',
 			'prepend'		=> 'lng',
@@ -201,8 +201,8 @@ class acf_field_google_map extends acf_field {
 		
 		// zoom
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Zoom','acf'),
-			'instructions'	=> __('Set the initial zoom level','acf'),
+			'label'			=> __('Zoom','fields'),
+			'instructions'	=> __('Set the initial zoom level','fields'),
 			'type'			=> 'text',
 			'name'			=> 'zoom',
 			'placeholder'	=> $this->default_values['zoom']
@@ -211,8 +211,8 @@ class acf_field_google_map extends acf_field {
 		
 		// allow_null
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Height','acf'),
-			'instructions'	=> __('Customize the map height','acf'),
+			'label'			=> __('Height','fields'),
+			'instructions'	=> __('Customize the map height','fields'),
 			'type'			=> 'text',
 			'name'			=> 'height',
 			'append'		=> 'px',

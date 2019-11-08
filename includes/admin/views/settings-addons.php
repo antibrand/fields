@@ -1,6 +1,6 @@
 <div class="wrap acf-settings-wrap">
 	
-	<h1><?php _e("Add-ons",'acf'); ?></h1>
+	<h1><?php _e("Add-ons",'fields'); ?></h1>
 	
 	<div class="add-ons-list">
 		
@@ -14,7 +14,7 @@
 			        "description"	=> "",
 			        "thumbnail"		=> "",
 			        "url"			=> "",
-			        "btn"			=> __("Download & Install",'acf'),
+			        "btn"			=> __("Download & Install",'fields'),
 			        "btn_color"		=> ""
 				));
 				
@@ -33,7 +33,7 @@
 					</div>
 					<div class="footer">
 						<?php if( apply_filters("acf/is_add_on_active/slug={$addon['slug']}", false ) ): ?>
-							<a class="button" disabled="disabled"><?php _e("Installed",'acf'); ?></a>
+							<a class="button" disabled="disabled"><?php _e("Installed",'fields'); ?></a>
 						<?php else: ?>
 							<a class="button <?php echo $addon['btn_color']; ?>" target="_blank" href="<?php echo $addon['url']; ?>" ><?php _e($addon['btn']); ?></a>
 						<?php endif; ?>

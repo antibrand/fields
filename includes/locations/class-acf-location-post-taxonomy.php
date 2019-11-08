@@ -24,7 +24,7 @@ class acf_location_post_taxonomy extends acf_location {
 		
 		// vars
 		$this->name = 'post_taxonomy';
-		$this->label = __("Post Taxonomy",'acf');
+		$this->label = __("Post Taxonomy",'fields');
 		$this->category = 'post';
     	
 	}

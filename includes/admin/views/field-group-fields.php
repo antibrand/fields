@@ -1,17 +1,17 @@
 <div class="acf-field-list-wrap">
 	
 	<ul class="acf-hl acf-thead">
-		<li class="li-field-order"><?php _e('Order','acf'); ?></li>
-		<li class="li-field-label"><?php _e('Label','acf'); ?></li>
-		<li class="li-field-name"><?php _e('Name','acf'); ?></li>
-		<li class="li-field-key"><?php _e('Key','acf'); ?></li>
-		<li class="li-field-type"><?php _e('Type','acf'); ?></li>
+		<li class="li-field-order"><?php _e('Order','fields'); ?></li>
+		<li class="li-field-label"><?php _e('Label','fields'); ?></li>
+		<li class="li-field-name"><?php _e('Name','fields'); ?></li>
+		<li class="li-field-key"><?php _e('Key','fields'); ?></li>
+		<li class="li-field-type"><?php _e('Type','fields'); ?></li>
 	</ul>
 	
 	<div class="acf-field-list<?php if( !$fields ){ echo ' -empty'; } ?>">
 		
 		<div class="no-fields-message">
-			<?php _e("No fields. Click the <strong>+ Add Field</strong> button to create your first field.",'acf'); ?>
+			<?php _e("No fields. Click the <strong>+ Add Field</strong> button to create your first field.",'fields'); ?>
 		</div>
 		
 		<?php if( $fields ):
@@ -28,7 +28,7 @@
 	
 	<ul class="acf-hl acf-tfoot">
 		<li class="acf-fr">
-			<a href="#" class="button button-primary button-large add-field"><?php _e('+ Add Field','acf'); ?></a>
+			<a href="#" class="button button-primary button-large add-field"><?php _e('+ Add Field','fields'); ?></a>
 		</li>
 	</ul>
 	
@@ -38,7 +38,7 @@
 	$clone = acf_get_valid_field(array(
 		'ID'		=> 'acfcloneindex',
 		'key'		=> 'acfcloneindex',
-		'label'		=> __('New Field','acf'),
+		'label'		=> __('New Field','fields'),
 		'name'		=> 'new_field',
 		'type'		=> 'text'
 	));

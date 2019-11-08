@@ -22,7 +22,7 @@ class acf_field_textarea extends acf_field {
 		
 		// vars
 		$this->name = 'textarea';
-		$this->label = __("Text Area",'acf');
+		$this->label = __("Text Area",'fields');
 		$this->defaults = array(
 			'default_value'	=> '',
 			'new_lines'		=> '',
@@ -99,8 +99,8 @@ class acf_field_textarea extends acf_field {
 		
 		// default_value
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Default Value','acf'),
-			'instructions'	=> __('Appears when creating a new post','acf'),
+			'label'			=> __('Default Value','fields'),
+			'instructions'	=> __('Appears when creating a new post','fields'),
 			'type'			=> 'textarea',
 			'name'			=> 'default_value',
 		));
@@ -108,8 +108,8 @@ class acf_field_textarea extends acf_field {
 		
 		// placeholder
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Placeholder Text','acf'),
-			'instructions'	=> __('Appears within the input','acf'),
+			'label'			=> __('Placeholder Text','fields'),
+			'instructions'	=> __('Appears within the input','fields'),
 			'type'			=> 'text',
 			'name'			=> 'placeholder',
 		));
@@ -117,8 +117,8 @@ class acf_field_textarea extends acf_field {
 		
 		// maxlength
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Character Limit','acf'),
-			'instructions'	=> __('Leave blank for no limit','acf'),
+			'label'			=> __('Character Limit','fields'),
+			'instructions'	=> __('Leave blank for no limit','fields'),
 			'type'			=> 'number',
 			'name'			=> 'maxlength',
 		));
@@ -126,8 +126,8 @@ class acf_field_textarea extends acf_field {
 		
 		// rows
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Rows','acf'),
-			'instructions'	=> __('Sets the textarea height','acf'),
+			'label'			=> __('Rows','fields'),
+			'instructions'	=> __('Sets the textarea height','fields'),
 			'type'			=> 'number',
 			'name'			=> 'rows',
 			'placeholder'	=> 8
@@ -136,14 +136,14 @@ class acf_field_textarea extends acf_field {
 		
 		// formatting
 		acf_render_field_setting( $field, array(
-			'label'			=> __('New Lines','acf'),
-			'instructions'	=> __('Controls how new lines are rendered','acf'),
+			'label'			=> __('New Lines','fields'),
+			'instructions'	=> __('Controls how new lines are rendered','fields'),
 			'type'			=> 'select',
 			'name'			=> 'new_lines',
 			'choices'		=> array(
-				'wpautop'		=> __("Automatically add paragraphs",'acf'),
-				'br'			=> __("Automatically add &lt;br&gt;",'acf'),
-				''				=> __("No Formatting",'acf')
+				'wpautop'		=> __("Automatically add paragraphs",'fields'),
+				'br'			=> __("Automatically add &lt;br&gt;",'fields'),
+				''				=> __("No Formatting",'fields')
 			)
 		));
 		
@@ -212,7 +212,7 @@ class acf_field_textarea extends acf_field {
 		// Note: Due to the way strlen (and mb_strlen) work, line breaks count as two characters in PHP, but not in Javascript (or HTML). 
 		// To avoid incorrectly calculating the length, replace double line breaks. 
 		if( $field['maxlength'] && mb_strlen(str_replace("\r\n", "\n", wp_unslash($value))) > $field['maxlength'] ) {
-			return sprintf( __('Value must not exceed %d characters', 'acf'), $field['maxlength'] );
+			return sprintf( __('Value must not exceed %d characters', 'fields'), $field['maxlength'] );
 		}
 		
 		// Return.

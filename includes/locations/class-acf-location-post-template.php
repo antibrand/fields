@@ -24,7 +24,7 @@ class acf_location_post_template extends acf_location {
 		
 		// vars
 		$this->name = 'post_template';
-		$this->label = __("Post Template",'acf');
+		$this->label = __("Post Template",'fields');
 		$this->category = 'post';
 		$this->public = acf_version_compare('wp', '>=', '4.7');
     	
@@ -131,7 +131,7 @@ class acf_location_post_template extends acf_location {
 		
 		// Default choices.
 		$choices = array(
-			'default' => apply_filters( 'default_page_template_title',  __('Default Template', 'acf') )
+			'default' => apply_filters( 'default_page_template_title',  __('Default Template', 'fields') )
 		);
 		
 		// Merge in all post templates.

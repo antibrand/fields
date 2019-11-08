@@ -22,7 +22,7 @@ class acf_field_link extends acf_field {
 		
 		// vars
 		$this->name = 'link';
-		$this->label = __("Link",'acf');
+		$this->label = __("Link",'fields');
 		$this->category = 'relational';
 		$this->defaults = array(
 			'return_format'	=> 'array',
@@ -130,14 +130,14 @@ class acf_field_link extends acf_field {
 		<?php endforeach; ?>
 	</div>
 	
-	<a href="#" class="button" data-name="add" target=""><?php _e('Select Link', 'acf'); ?></a>
+	<a href="#" class="button" data-name="add" target=""><?php _e('Select Link', 'fields'); ?></a>
 	
 	<div class="link-wrap">
 		<span class="link-title"><?php echo esc_html($link['title']); ?></span>
 		<a class="link-url" href="<?php echo esc_url($link['url']); ?>" target="_blank"><?php echo esc_html($link['url']); ?></a>
-		<i class="acf-icon -link-ext acf-js-tooltip" title="<?php _e('Opens in a new window/tab', 'acf'); ?>"></i><?php
-		?><a class="acf-icon -pencil -clear acf-js-tooltip" data-name="edit" href="#" title="<?php _e('Edit', 'acf'); ?>"></a><?php
-		?><a class="acf-icon -cancel -clear acf-js-tooltip" data-name="remove" href="#" title="<?php _e('Remove', 'acf'); ?>"></a>
+		<i class="acf-icon -link-ext acf-js-tooltip" title="<?php _e('Opens in a new window/tab', 'fields'); ?>"></i><?php
+		?><a class="acf-icon -pencil -clear acf-js-tooltip" data-name="edit" href="#" title="<?php _e('Edit', 'fields'); ?>"></a><?php
+		?><a class="acf-icon -cancel -clear acf-js-tooltip" data-name="remove" href="#" title="<?php _e('Remove', 'fields'); ?>"></a>
 	</div>
 	
 </div>
@@ -163,14 +163,14 @@ class acf_field_link extends acf_field {
 		
 		// return_format
 		acf_render_field_setting( $field, array(
-			'label'			=> __('Return Value','acf'),
-			'instructions'	=> __('Specify the returned value on front end','acf'),
+			'label'			=> __('Return Value','fields'),
+			'instructions'	=> __('Specify the returned value on front end','fields'),
 			'type'			=> 'radio',
 			'name'			=> 'return_format',
 			'layout'		=> 'horizontal',
 			'choices'		=> array(
-				'array'			=> __("Link Array",'acf'),
-				'url'			=> __("Link URL",'acf'),
+				'array'			=> __("Link Array",'fields'),
+				'url'			=> __("Link URL",'fields'),
 			)
 		));
 						

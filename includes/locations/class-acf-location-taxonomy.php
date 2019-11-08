@@ -24,7 +24,7 @@ class acf_location_taxonomy extends acf_location {
 		
 		// vars
 		$this->name = 'taxonomy';
-		$this->label = __("Taxonomy",'acf');
+		$this->label = __("Taxonomy",'fields');
 		$this->category = 'forms';
     	
 	}
@@ -76,7 +76,7 @@ class acf_location_taxonomy extends acf_location {
 	function rule_values( $choices, $rule ) {
 		
 		// vars
-		$choices = array( 'all' => __('All', 'acf') );
+		$choices = array( 'all' => __('All', 'fields') );
 		$choices = array_merge( $choices, acf_get_taxonomy_labels() );
 		
 		

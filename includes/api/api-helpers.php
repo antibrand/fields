@@ -824,9 +824,9 @@ function acf_get_image_sizes() {
 	
 	// vars
 	$sizes = array(
-		'thumbnail'	=>	__("Thumbnail",'acf'),
-		'medium'	=>	__("Medium",'acf'),
-		'large'		=>	__("Large",'acf')
+		'thumbnail'	=>	__("Thumbnail",'fields'),
+		'medium'	=>	__("Medium",'fields'),
+		'large'		=>	__("Large",'fields')
 	);
 	
 	
@@ -875,7 +875,7 @@ function acf_get_image_sizes() {
 	
 	
 	// add full end
-	$sizes['full'] = __("Full Size",'acf');
+	$sizes['full'] = __("Full Size",'fields');
 	
 	
 	// filter for 3rd party customization
@@ -1596,7 +1596,7 @@ function acf_get_post_title( $post = 0, $is_search = false ) {
 	// empty
 	if( $title === '' ) {
 		
-		$title = __('(no title)', 'acf');
+		$title = __('(no title)', 'fields');
 		
 	}
 	
@@ -1635,7 +1635,7 @@ function acf_get_post_title( $post = 0, $is_search = false ) {
 			
 			
 			// append
-			$append .= ' | ' . __('Parent', 'acf') . ': ' . implode(' / ', $ancestors);
+			$append .= ' | ' . __('Parent', 'fields') . ': ' . implode(' / ', $ancestors);
 			
 		}
 */
@@ -2840,7 +2840,7 @@ function acf_upload_files( $ancestors = array() ) {
 	// populate with $_FILES data
 	foreach( array_keys($file) as $k ) {
 		
-		$file[ $k ] = $_FILES['acf'][ $k ];
+		$file[ $k ] = $_FILES['fields'][ $k ];
 		
 	}
 	
@@ -2894,7 +2894,7 @@ function acf_upload_files( $ancestors = array() ) {
 	
 	
 	// update $_POST
-	array_unshift($ancestors, 'acf');
+	array_unshift($ancestors, 'fields');
 	acf_update_nested_array( $_POST, $ancestors, $attachment_id );
 	
 }
@@ -3567,12 +3567,12 @@ function acf_validate_attachment( $attachment, $field, $context = 'prepare' ) {
 			if( $min_width && $file['width'] < $min_width ) {
 				
 				// min width
-				$errors['min_width'] = sprintf(__('Image width must be at least %dpx.', 'acf'), $min_width );
+				$errors['min_width'] = sprintf(__('Image width must be at least %dpx.', 'fields'), $min_width );
 				
 			} elseif( $max_width && $file['width'] > $max_width ) {
 				
 				// min width
-				$errors['max_width'] = sprintf(__('Image width must not exceed %dpx.', 'acf'), $max_width );
+				$errors['max_width'] = sprintf(__('Image width must not exceed %dpx.', 'fields'), $max_width );
 				
 			}
 			
@@ -3588,12 +3588,12 @@ function acf_validate_attachment( $attachment, $field, $context = 'prepare' ) {
 			if( $min_height && $file['height'] < $min_height ) {
 				
 				// min height
-				$errors['min_height'] = sprintf(__('Image height must be at least %dpx.', 'acf'), $min_height );
+				$errors['min_height'] = sprintf(__('Image height must be at least %dpx.', 'fields'), $min_height );
 				
 			}  elseif( $max_height && $file['height'] > $max_height ) {
 				
 				// min height
-				$errors['max_height'] = sprintf(__('Image height must not exceed %dpx.', 'acf'), $max_height );
+				$errors['max_height'] = sprintf(__('Image height must not exceed %dpx.', 'fields'), $max_height );
 				
 			}
 			
@@ -3611,12 +3611,12 @@ function acf_validate_attachment( $attachment, $field, $context = 'prepare' ) {
 		if( $min_size && $file['size'] < acf_get_filesize($min_size) ) {
 				
 			// min width
-			$errors['min_size'] = sprintf(__('File size must be at least %s.', 'acf'), acf_format_filesize($min_size) );
+			$errors['min_size'] = sprintf(__('File size must be at least %s.', 'fields'), acf_format_filesize($min_size) );
 			
 		} elseif( $max_size && $file['size'] > acf_get_filesize($max_size) ) {
 				
 			// min width
-			$errors['max_size'] = sprintf(__('File size must must not exceed %s.', 'acf'), acf_format_filesize($max_size) );
+			$errors['max_size'] = sprintf(__('File size must must not exceed %s.', 'fields'), acf_format_filesize($max_size) );
 			
 		}
 	
@@ -3646,11 +3646,11 @@ function acf_validate_attachment( $attachment, $field, $context = 'prepare' ) {
 				$last1 = array_pop($mime_types);
 				$last2 = array_pop($mime_types);
 				
-				$mime_types[] = $last2 . ' ' . __('or', 'acf') . ' ' . $last1;
+				$mime_types[] = $last2 . ' ' . __('or', 'fields') . ' ' . $last1;
 				
 			}
 			
-			$errors['mime_types'] = sprintf(__('File type must be %s.', 'acf'), implode(', ', $mime_types) );
+			$errors['mime_types'] = sprintf(__('File type must be %s.', 'fields'), implode(', ', $mime_types) );
 			
 		}
 				

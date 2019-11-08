@@ -24,7 +24,7 @@ class acf_location_current_user_role extends acf_location {
 		
 		// vars
 		$this->name = 'current_user_role';
-		$this->label = __("Current User Role",'acf');
+		$this->label = __("Current User Role",'fields');
 		$this->category = 'user';
     	
 	}
@@ -107,7 +107,7 @@ class acf_location_current_user_role extends acf_location {
 		// multi-site
 		if( is_multisite() ) {
 			
-			$prepend = array( 'super_admin' => __('Super Admin', 'acf') );
+			$prepend = array( 'super_admin' => __('Super Admin', 'fields') );
 			$choices = array_merge( $prepend, $choices );
 			
 		}

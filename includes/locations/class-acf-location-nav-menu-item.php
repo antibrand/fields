@@ -24,7 +24,7 @@ class acf_location_nav_menu_item extends acf_location {
 		
 		// vars
 		$this->name = 'nav_menu_item';
-		$this->label = __("Menu Item",'acf');
+		$this->label = __("Menu Item",'fields');
 		$this->category = 'forms';
     	
 	}

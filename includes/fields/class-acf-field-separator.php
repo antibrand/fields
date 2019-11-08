@@ -22,7 +22,7 @@ class acf_field_separator extends acf_field {
 		
 		// vars
 		$this->name = 'separator';
-		$this->label = __("Separator",'acf');
+		$this->label = __("Separator",'fields');
 		$this->category = 'layout';
 		
 	}

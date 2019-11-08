@@ -24,7 +24,7 @@ class acf_location_current_user extends acf_location {
 		
 		// vars
 		$this->name = 'current_user';
-		$this->label = __("Current User",'acf');
+		$this->label = __("Current User",'fields');
 		$this->category = 'user';
     	
 	}
@@ -94,9 +94,9 @@ class acf_location_current_user extends acf_location {
 	function rule_values( $choices, $rule ) {
 		
 		return array(
-			'logged_in'		=> __('Logged in', 'acf'),
-			'viewing_front'	=> __('Viewing front end', 'acf'),
-			'viewing_back'	=> __('Viewing back end', 'acf')
+			'logged_in'		=> __('Logged in', 'fields'),
+			'viewing_front'	=> __('Viewing front end', 'fields'),
+			'viewing_back'	=> __('Viewing back end', 'fields')
 		);
 		
 	}

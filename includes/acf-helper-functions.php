@@ -38,10 +38,10 @@ function acf_not_empty( $var ) {
  * @date	9/1/19
  * @since	5.7.10
  *
- * @param	string $prefix The id prefix. Defaults to 'acf'.
+ * @param	string $prefix The id prefix. Defaults to 'fields'.
  * @return	string
  */
-function acf_uniqid( $prefix = 'acf' ) {
+function acf_uniqid( $prefix = 'fields' ) {
 	
 	// Instantiate global counter.
 	global $acf_uniqid;

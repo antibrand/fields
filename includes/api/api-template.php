@@ -985,7 +985,7 @@ function acf_shortcode( $atts ) {
 	
 }
 
-add_shortcode('acf', 'acf_shortcode');
+add_shortcode('fields', 'acf_shortcode');
 
 
 /*
